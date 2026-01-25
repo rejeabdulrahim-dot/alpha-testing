@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.strip {
+	top: 0;
+	left: 0;
+	height: 50vh;
+	background-color: darkgreen;
+	width: 100%;
+	z-index: 1;
+}
+
+.ProductContainer {
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+.ProductCard {
+	height: 200px;
+	width: 200px;
+	position: relative;
+	background-color: white;
+}
+
+#pic1 {
+	background-image: url("C:/Users/edith/Desktop/Alpha ltd/alpha images/AnotherCamera.jpeg");
+	z-index: 2;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
+
+#pic2{
+	background-image: url("C:/Users/edith/Desktop/Alpha ltd/alpha images/cameras.jpg");
+	z-index: 2;
+	background-size: cover;
+}
+
+* {
+	outline: 1px solid red !important;
+}

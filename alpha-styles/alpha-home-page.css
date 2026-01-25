@@ -1,0 +1,470 @@
+body {
+	margin: 0;
+	padding: 0;
+	/*this is very useful, i shouldnt remove it from
+	my code, it helps solve many of my overlaying issues
+	basically firefox and browsers such as chrome
+	always add a little amount of padding and margin
+	i guess, eitherway due to this you dont take it into
+	factor and it messes up a lot, just adding this
+	took away 80 percent of my troubles so yah, 
+	its very useful*/
+}
+
+.top-strip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 188, 212, 1.0);
+	width: 100%;
+	height: 30vh;
+	z-index: 1;
+}
+
+.middle-strip {
+	position: absolute;
+	background-color: black;
+	z-index: 3;
+}
+
+
+h1 {
+	position: absolute;
+	background-color: rgba(55, 55, 55, 1.0);
+	color: white;
+	width: 100%;
+	font-family: 'Poppins', sans-serif;
+	top: 45px;
+	z-index: 2;
+
+}
+
+
+/** {
+	outline: 1px solid red !important;
+}*/
+
+.logo {
+	position: absolute;
+	width: 180px;
+	height: 140px;
+	right: 10px;
+	top: 0;
+	right: 0;
+	z-index: 3;
+
+}
+
+a {
+	text-decoration: none;
+} /*removes the default line caused by the <a> */
+
+a:hover {
+	text-decoration: underline;
+	/*allows the line to come back on hover*/
+}
+
+.first-link {
+	position: absolute;
+	display: block;
+	width: fit-content;
+	margin-top: 100px;
+	margin-left: 100px;
+	font-size: 18px;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	z-index: 2;
+}
+
+.second-link {
+	position: absolute;
+	display: block;
+	width: fit-content;
+	font-size: 18px;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	margin-left: 300px;
+	margin-top: 100px;
+}
+
+.third-link {
+	position: absolute;
+	display: block;
+	width: fit-content;
+	font-size: 18px;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+	margin-left: 470px;
+	margin-top: 100px;
+}
+
+.main-picture {
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	height: 70vh;
+	object-fit: cover;
+}
+
+.main-heading {
+	margin-top: 180px;
+	margin-left:20px ;
+	z-index: 2;
+	position: relative;
+}
+
+h2 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 100px;
+	background-color: transparent;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 40px;
+	background-color: transparent;
+}
+
+.floaty-frames {
+	display: grid;
+	height: 400px;
+	width: 100%;
+	position: absolute;
+}
+
+h4 {
+	width: fit-content;
+	position: relative;
+	z-index: 2;
+	font-family: 'Poppins', sans-serif;
+	font-size: 50px;
+	color: rgba(0, 188, 212, 1.0);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+	width: fit-content;
+	position: relative;
+	z-index: 2;
+	font-family: 'Poppins',sans-serif;
+	font-size: 20px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.p1 {
+	margin-left: 100px;
+}
+
+.first-following-picture {
+	margin-top: 0px;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	position: absolute;
+	z-index: 1;
+} 
+
+.quote {
+	position: absolute;
+	display: flex;
+	background-color: #fff;
+	z-index: 3;
+	width: fit-content;
+	height: 175px;
+	border-radius: 20px;
+	margin-left: 100px;
+	padding: 10px;
+
+}
+
+.p-quote {
+	position: relative;
+	
+	width: fit-content;
+}
+
+.quote-button {
+	position: absolute;
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	background-color: rgba(0, 188, 212, 1.0);
+	color: #fff;
+	border: none;
+	border-radius: 30px;
+	z-index: 4;
+	width: 220px;
+	height: 100px;
+	margin-left: 270px;
+	margin-top: 80px;
+
+}
+
+.quote-button:hover {
+	transform: translateY(-5px);
+	cursor: pointer;
+}
+
+.popups-strip {
+	position: relative;
+	left: 0;
+	background-color: rgba(55, 55, 55, 1.0);
+	width: 100%;
+	height: 1000px;
+	
+}
+
+	
+
+
+
+.focus-areas {
+	position: relative;
+}
+
+h5 {
+	color: red;
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	z-index: 2;
+	position: absolute;
+	margin-top: 250px;
+}
+
+
+.product-container {
+	position: absolute;
+
+	
+}
+
+.product-card {
+	margin-top: 450px;
+	width: fit-content;
+	background-color: #fff;
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+	transform: scale(1.1);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+
+.popup-pics {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+
+
+}
+
+.popup-button {
+	position: relative;
+	padding: 15px;
+	padding-inline: 163px;
+	color: white;
+	background-color: rgba(0, 188, 212, 1.0);
+	margin-top: 350px;
+	border: none;
+}
+
+.popup-button-middle {
+	position: relative;
+	padding: 10px;
+	color: white;
+	background-color: rgba(0, 188, 215, 1.0);
+	padding-inline: 163px;
+	margin-top: 350px;
+	border: none;
+}
+
+
+.end-strip {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 700px;
+	background-color: rgba(0, 188, 212, 1.0);
+}
+
+.p-end {
+	color: white;
+	margin-top:80px;
+	position: absolute;
+	margin-left: 20px;
+
+}
+
+b {
+	color: rgba(55, 55, 55, 1.0);
+}
+
+footer {
+	color: white;
+	font-size: 30px;
+	font-family: 'Poppins', sans-serif;
+	z-index: 3;
+	position: relative;
+
+}
+
+/*Test data*/
+/*Test data*/
+/*Test data*/
+/*Test data*/
+/*Test data*/
+/*Test data*/
+/*Test data*/
+/*Test data*/
+/*Test data*/
+
+
+
+
+.container {
+	position: relative;
+	z-index: 3;
+	margin-top: 420px;
+}
+
+.container .wrapper {
+	width: 80vw;
+	height: 90vh;
+	box-shadow: 10px 10px 10px ;
+	margin: 0 auto;
+	overflow: hidden;/*i need this so that when the images slide out they are hidden and dont show a strip on my page*/
+	
+}
+
+.container .wrapper-holder {
+	display: grid;
+	grid-template-columns: repeat(4, 100%);
+	height: 100%;
+	width: 100%;
+	animation: slider 30s ease-in-out infinite;
+	
+}
+
+.container .wrapper-holder div {
+	background-position: center !important;
+	background-size: contain;
+	background-repeat: no-repeat !important;/*need this , without it the images i put repeat if they cant fit within the space*/
+	background-color: transparent;
+	
+}
+
+
+
+.container #slider-img-1 {
+	background-image: url("C:/Users/edith/Desktop/Alpha ltd/alpha images/services.png");
+	background-position: center;
+	background-size: contain;/*this is essential for me as it helps keep the whole image within its specified block*/
+	background-repeat: no-repeat;
+	
+}
+
+.container #slider-img-2 {
+	background-image: url("C:/Users/edith/Desktop/Alpha ltd/alpha images/camera-popup-pic.avif");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.container #slider-img-3 {
+	background-image: url("C:/Users/edith/Desktop/Alpha ltd/alpha images/services.png");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.container #slider-img-4 {
+	background-image: url("C:/Users/edith/Desktop/Alpha ltd/alpha images/camera-popup-pic.avif");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.button-holder {
+	position: relative;
+	text-align: center;
+	margin-top: 100px;
+	z-index: 5;
+}/*i need this reference , without it i cant even get the bottom buttons for sliding*/
+
+.container .button-holder .button {
+	background-color: black;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	display: inline-block;
+	margin: .3rem;
+}
+
+.container .button-holder{
+	position: absolute;
+	left: 45%;
+	bottom: 0%;
+}
+
+.button:hover{
+	box-shadow: 0px 0px 7px 4px rgba(0, 255, 255, 0.6);
+}
+
+@keyframes slider{
+	0%{transform: translateX(0%);}
+	10%{transform: translateX(-100%);}
+	20%{transform: translateX(-100%);}
+	30%{transform: translateX(-200%);}
+	40%{transform: translateX(-200%);}
+	50%{transform: translateX(-200%);}
+	60%{transform: translateX(-300%);}
+	70%{transform: translateX(-300%);}
+	80%{transform: translateX(-300%);}
+	90%{transform: translateX(0%);}
+	100%{transform: translateX(0%);}
+}
+
+/*about us html*/
+/*about us html*/
+/*about us html*/
+/*about us html*/
+/*about us html*/
+/*about us html*/
+/*about us html*/
+/*about us html*/
+/*about us html*/
+
+.AboutUsStrip {
+	background-image: url("C:/Users/edith/Desktop/Alpha ltd/alpha images/gate.jpg");
+	aspect-ratio: 2/1.5;
+	background-size: cover;
+	z-index: 1;
+}
+
+
+
+/*.AboutUsStrip {
+	background: linear-gradient(to left, rgba(0, 188, 212, 1.0), rgba(55, 55, 55, 1.0));
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}*/
+
+.about-us-paragraph {
+	position: absolute;
+	bottom: 200px;
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+	color: white;
+
+
+}
