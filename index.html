@@ -34,6 +34,10 @@
 		a:hover{
 			text-decoration: underline;
 		}
+
+		#contact{
+			text-decoration: none;
+		}
 	
 
 		.container .wrapper {
@@ -57,7 +61,7 @@
 
 		.container .wrapper-holder div {
 			background-position: center !important;
-			background-size: cover;
+			background-size: contain;
 			background-repeat: no-repeat !important;/*need this , without it the images i put repeat if they cant fit within the space*/
 			background-color: transparent;
 			
@@ -222,13 +226,14 @@
     <div class="min-vh-100 " style="background-color:rgba(55, 55, 55, 0.8);">
 
 
-    	<div class="d-flex justify-content-center align-items-center">
-    		<h5 class="text text-white"style="font-size: 3rem;">Areas of Focus</h5>
+    	<div class="d-flex justify-content-center align-items-center mb-5">
+    		<h5 class="text text-white"style="font-size: 4rem;">Areas of Focus</h5>
     	</div>
     	
-	    <div class="row">
+	    <!--<div class="row">
 	    	<div class="col-12 col-md-4">
-	    		<div class="card"  >
+	    		<a id="contact" href="our-services.html/alpha-images/centurion.jpg">
+	    			<div class="card"  >
 
 			    	<div class="card-body">
 			    		<h6 class="card-header bg-primary lead">Surveillance</h6>
@@ -236,6 +241,7 @@
 			    	</div>
 			    	
 	    	    </div>
+	    		</a>
 	    	</div>
 
 	    	<div class="col-12 col-md-4">
@@ -258,17 +264,149 @@
 			    		<div class="card-text">This is what yusrah loves to do</div>
 			    	</div>
 	    	    </div>
+	    	</div>-->
+
+	  
+
+	    	<div class="row flex-column justify-content-center align-items-center ">
+	    		<div class="col-6 mb-5 bg-info rounded-5">
+	    			<button class="btn text-grey " data-bs-toggle="modal" data-bs-target="#surveillance" style="font-size: 3rem;">Surveillance</button>
+	    		</div>
+
+	    		<div class="col-6 mb-5 bg-secondary rounded-5 ">
+	    			<button class="btn text-info px-6" data-bs-toggle="modal" data-bs-target="#gate" style="font-size: 3rem;">Gate</button>
+	    		</div>
+
+	    		<div class="col-6 mb-5 bg-info rounded-5">
+	    			<button class="btn text-grey px-5" data-bs-toggle="modal" data-bs-target="#solar" style="font-size: 3rem;">Solar</button>
+	    		</div>
+
+	    		<div class="col-6 mb-5 bg-secondary rounded-5">
+	    			<button class="btn text-info" data-bs-toggle="modal" data-bs-target="#intercom" style="font-size: 3rem;">Intercom</button>
+	    		</div>
+
+	    		<div class="col-6 mb-5 bg-info rounded-5">
+	    			<button class="btn text-grey" data-bs-toggle="modal" data-bs-target="#aircon" style="font-size: 3rem;">Aircon</button>
+	    		</div>
 	    	</div>
 
-	    	<div class="col-12 col-md-4">
-	    		<div class="card" >
+	    	<div class="modal" id="surveillance">
+	    		<div class="modal-dialog bg-white">
+	    			<div class="modal-header">
+	    				<h1 class="modal-title">Surveillance</h1>
+	    				<button class="btn btn-close" dismiss="modal"></button>
+	    			</div>
 
-			    	<div class="card-body">
-			    		<h6 class="card-header bg-primary lead">Surveillance</h6>
-			    		<img src="alpha-images/camera-popup-pic.avif" class="card-img-top">
-			    	</div>
-			    	
-	    	    </div>
+	    			<div class="modal-body">
+	    				<image src="alpha-images/kudas-camera.jpeg" style="height: 5rem; width: 5rem;">
+	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    			</div>
+
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+	    			</div>
+	    		</div>
+	    	</div>
+
+	    	<div class="modal" id="gate">
+	    		<div class="modal-dialog bg-white">
+	    			<div class="modal-header">
+	    				<h1 class="modal-title">Gate</h1>
+	    				<button class="btn btn-close" dismiss="modal"></button>
+	    			</div>
+
+	    			<div class="modal-body">
+	    				<image src="alpha-images/kudas-camera.jpeg" style="height: 5rem; width: 5rem;">
+	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    			</div>
+
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+	    			</div>
+	    		</div>
+
+	    	</div>
+
+	    	<div class="modal" id="solar">
+	    		<div class="modal-dialog bg-white">
+	    			<div class="modal-header">
+	    				<h1 class="modal-title">Solar</h1>
+	    				<button class="btn btn-close" dismiss="modal"></button>
+	    			</div>
+
+	    			<div class="modal-body">
+	    				<image src="alpha-images/kudas-camera.jpeg" style="height: 5rem; width: 5rem;">
+	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    			</div>
+
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+	    			</div>
+	    		</div>
+
+	    	</div>
+
+	    	<div class="modal" id="intercom">
+	    		<div class="modal-dialog bg-white">
+	    			<div class="modal-header">
+	    				<h1 class="modal-title">Intercom</h1>
+	    				<button class="btn btn-close" dismiss="modal"></button>
+	    			</div>
+
+	    			<div class="modal-body">
+	    				<image src="alpha-images/kudas-camera.jpeg" style="height: 5rem; width: 5rem;">
+	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    			</div>
+
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+	    			</div>
+	    		</div>
+
+	    	</div>
+
+	    	<div class="modal" id="aircon">
+	    		<div class="modal-dialog bg-white">
+	    			<div class="modal-header">
+	    				<h1 class="modal-title">Aircon</h1>
+	    				<button class="btn btn-close" dismiss="modal"></button>
+	    			</div>
+
+	    			<div class="modal-body">
+	    				<image src="alpha-images/kudas-camera.jpeg" style="height: 5rem; width: 5rem;">
+	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    			</div>
+
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+	    			</div>
+	    		</div>
+
 	    	</div>
 
 	    </div>
