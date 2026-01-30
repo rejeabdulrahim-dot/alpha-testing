@@ -1,493 +1,669 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="alpha-styles/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="alpha-styles/bootstrap-grid.css">
-	<link rel="stylesheet" type="text/css" href="alpha-styles/all.min.css">
-	
-	<title>Alpha home page</title>
-	<script src="alpha-scripts/bootstrap.bundle.js"></script>
-	<script src="https://kit.fontawesome.com/013c25fe14.js" crossorigin="anonymous"></script>
-	<style>
-		
-		* {
-			outline: 1px solid red !important;
-		}
-		.card {
-			transform: scale(0.8);
-		}
-		.card:hover {
-			transform: scale(0.9);
-		}
-
-		#request-button:hover {
-			transform: translateY(-10px);
-		}
-
-		a {
-			text-decoration: none;
-			color: white;
-		}
-
-		a:hover{
-			text-decoration: underline;
-		}
-
-		#contact{
-			text-decoration: none;
-		}
-	
-
-		.container .wrapper {
-			width: 90%;
-			max-width: 600px;
-			height: 300px;
-			box-shadow: 10px 10px 10px ;
-			margin: 0 auto;
-			/*margin-right: 200px; commenting it out cause it does nothing*/
-			overflow: hidden;/*i need this so that when the images slide out they are hidden and dont show a strip on my page*/
-			
-		}
-
-		.container .wrapper-holder {
-			display: grid;
-			grid-template-columns: repeat(4, 100%);
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-			animation: slider 30s ease-in-out infinite;
-			
-		}
-
-		.container .wrapper-holder div {
-			background-position: center !important;
-			background-size: contain;
-			background-repeat: no-repeat !important;/*need this , without it the images i put repeat if they cant fit within the space*/
-			background-color: transparent;
-			
-		}
-
-
-
-		.container #slider-img-1 {
-			background-image: url("alpha-images/kudas-monitoring.jpeg");
-			background-position: center;
-			background-size: contain;/*this is essential for me as it helps keep the whole image within its specified block*/
-			background-repeat: no-repeat;
-			
-		}
-
-		.container #slider-img-2 {
-			background-image: url("alpha-images/kudas-advert.jpeg");
-			background-position: center;
-			background-size: contain;
-			background-repeat: no-repeat;
-		}
-
-		.container #slider-img-3 {
-			background-image: url("alpha-images/kudas-camera.jpeg");
-			background-position: center;
-			background-size: contain;
-			background-repeat: no-repeat;
-		}
-
-		.container #slider-img-4 {
-			background-image: url("alpha-images/kudas-ecbox.jpeg");
-			background-position: center;
-			background-size: contain;
-			background-repeat: no-repeat;
-		}
-
-		.button-holder {
-			position: relative;
-			text-align: center;
-			margin-top: 10px;
-			z-index: 5;
-		}/*i need this reference , without it i cant even get the bottom buttons for sliding*/
-
-		.container .button-holder .button {
-			background-color: white;
-			width: 15px;
-			height: 15px;
-			border-radius: 15px;
-			display: inline-block;
-			margin: .3rem;
-		}
-
-		.container .button-holder{
-			position: absolute;
-			left: 45%; 
-			bottom: 0%;
-		}
-
-		.button:hover{
-			box-shadow: 0px 0px 7px 4px rgba(0, 255, 255, 0.6);
-		}
-
-		@keyframes slider{
-			0%{transform: translateX(0%);}
-			10%{transform: translateX(-100%);}
-			20%{transform: translateX(-100%);}
-			30%{transform: translateX(-200%);}
-			40%{transform: translateX(-200%);}
-			50%{transform: translateX(-200%);}
-			60%{transform: translateX(-300%);}
-			70%{transform: translateX(-300%);}
-			80%{transform: translateX(-300%);}
-			90%{transform: translateX(0%);}
-			100%{transform: translateX(0%);}
-		}
-
-		
-
-	</style>
-</head>
-<body>
-
-	<a href="https://wa.me/27734727969?text=Hello%20I%20am%20interested%20in%20your%20products" target="_blank_" style="color: #25D366; font-size: 50px; bottom: 0; right: 0; position: fixed;">
-		<i class="fab fa-whatsapp"></i>
-	</a>
-
-	<div class="background  " style="background-color: rgba(0, 188, 212, 1.0);">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col text-white ">
-					<h1 style="margin-top: 1.5rem;
-					background-color: grey;">ALPHA HANDYMAN</h1>
-
-				</div>
-				<div class="col-3">
-					<img src="alpha-images/logo.png" class="img-fluid" style="height: 6rem;">
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-3 col-md-2 text-white" style="margin-top: 1.2rem; margin-left: 1rem;">
-					<a href="our-services.html">Our services</a>
-				</div>
-				<div class=" col-3 col-md-2 text-white" style="margin-top: 1.2rem;">
-					<a href="about-us.html">About us</a>
-				</div>
-				<div class="col-3 col-md-2 text-white" style="margin-top: 1.2rem;">
-					<a href="contact-us.html">Contact us</a>
-				</div>
-			</div>
-	   </div>
-
-	</div>
-
-	<div class="background " style="height: 10px; background-color: rgba(55, 55, 55, 0.5);">
-	</div>
-
-	<div class="bg-image img-fluid   " style="min-height: 75vh; background-image: url('alpha-images/roof-camera.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;">
-    	<h2 class="" style="font-size: 5rem; margin-left: 1rem;">Quality &<br>Trusted Work</h2>
-		<h3 class="display-3 mt-2" style=" margin-left: 1rem;">Guaranteed work by skilled<br> professionals since 2017</h3>
-    </div>
-
-    <div class="bg-image min-vh-100 " style="background-image: url('alpha-images/AnotherCamera.jpeg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;">
-	<h4 class="display-4" style="color: rgba(0, 188, 215, 1.0);
-		margin-left: 1.5rem;">Electrical and security installation specialists</h4>
-	<p class="lead" style="margin-left: 1.5rem;">Alpha handyman prides itself in quality work, with skilled technicians at your service.<br> We specialise in everything electrical, and excel at security servalliance.<br>Bringing safety and assurrance to those seeking servaillance solutions.<br>We also have a good reputation for installing electrical gates<br>as well as solar systems for those seeking to have a sort of<br> independance from the main south african grid.</p>
-
-	
-    <div class="container">
-		<div class="row ">
-			<!-- i assume mx-auto means automatic margin on x-axis -->
-			<div class="col-11 col-md-4 mx-auto mb-3 bg-white" style=" border-radius: 1.5rem;
-			padding: 1rem; height: fit-content;">
-				<p>We offer maintanance to help keep operations and processes at optimal condition and reduce down time and consultancy.<br>
-				</p>
-				<button id="request-button" class="w-100 "style="background-color: rgba(0, 188, 215, 1.0);
-				padding: 20px;
-				border-radius: 1.5rem;
-				">REQUEST A QUOTE</button>
-			</div>
-			<div class="col-12 col-md-6 mb-3">
-				<div class="container" style="">
-					<div class="wrapper">
-						<div class="wrapper-holder">
-							<div id="slider-img-1"></div>
-							<div id="slider-img-2"></div>
-							<div id="slider-img-3"></div>
-							<div id="slider-img-4"></div>
-						</div>
-					</div>
-		        </div>
-			</div>
-		</div>
-    </div>
-
-	</div>
-
-	
-
-    <div class="min-vh-100 " style="background-color:rgba(55, 55, 55, 0.8);">
-
-
-    	<div class="d-flex justify-content-center align-items-center mb-5">
-    		<h5 class="text text-white"style="font-size: 4rem;">Areas of Focus</h5>
-    	</div>
-
-    	<div class="container">
-    	
-		    <div class="row">
-		    	<div class="col-12 col-md-4">
-		    		
-		    		<div class="card" data-bs-target="#surveillance" data-bs-toggle="modal"  >
-
-				    	<div class="card-body">
-				    		<h6 class="card-header bg-primary lead">Surveillance</h6>
-				    		<img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
-				    	</div>
-				    	
-		    	    </div>
-		    		
-		    	</div>
-
-		    	<div class="col-12 col-md-4">
-		    		<div class="card"  data-bs-target="#gate" data-bs-toggle="modal" >
-
-				    	<div class="card-body">
-				    		<h6 class="card-header bg-danger lead">Gate Installation</h6>
-				    		<img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
-				    	</div>
-		    	    </div>
-		    	</div>
-
-		    	<div class="col-12 col-md-4">
-		    		<div class="card" data-bs-target="#solar" data-bs-toggle="modal" >
-		    			
-
-				    	<div class="card-body">
-				    		<h6 class="card-header bg-warning lead">Solar installation</h6>
-				    		<img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
-				    		<div class="card-text">tap for more info</div>
-				    	</div>
-		    	    </div>
-		    	</div>
-
-		    	<div class="col-12 col-md-4">
-		    		<div class="card" data-bs-target="#aircon" data-bs-toggle="modal" >
-		    			
-
-				    	<div class="card-body">
-				    		<h6 class="card-header bg-warning lead">Aircon</h6>
-				    		<img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
-				    		<div class="card-text">tap for more info</div>
-				    	</div>
-		    	    </div>
-		    	</div>
-		    </div>
-
-	    </div>
-
-	    
-            <!--<div class="container">
-		    	<div class="row flex-column justify-content-center align-items-center ">
-		    		<div class="col-6 mb-5 bg-info rounded-5">
-		    			<button class="btn text-grey " data-bs-toggle="modal" data-bs-target="" style="font-size: 3rem;">Surveillance</button>
-		    		</div>
-
-		    		<div class="col-6 mb-5 bg-secondary rounded-5 ">
-		    			<button class="btn text-info px-6" data-bs-toggle="modal" data-bs-target="#gate" style="font-size: 3rem;">Gate</button>
-		    		</div>
-
-		    		<div class="col-6 mb-5 bg-info rounded-5">
-		    			<button class="btn text-grey px-5" data-bs-toggle="modal" data-bs-target="#solar" style="font-size: 3rem;">Solar</button>
-		    		</div>
-
-		    		<div class="col-6 mb-5 bg-secondary rounded-5">
-		    			<button class="btn text-info" data-bs-toggle="modal" data-bs-target="#intercom" style="font-size: 3rem;">Intercom</button>
-		    		</div>
-
-		    		<div class="col-6 mb-5 bg-info rounded-5">
-		    			<button class="btn text-grey" data-bs-toggle="modal" data-bs-target="#aircon" style="font-size: 3rem;">Aircon</button>
-		    		</div>
-		    	</div>
-	        </div>-->
-
-	    	<div class="modal" id="surveillance">
-	    		<div class="modal-dialog bg-white">
-	    			<div class="modal-header">
-	    				<h1 class="modal-title">Surveillance</h1>
-	    				<button class="btn btn-close" dismiss="modal"></button>
-	    			</div>
-
-	    			<div class="modal-body">
-	    				<image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
-	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	    			</div>
-
-	    			<div class="modal-footer">
-	    				<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-	    			</div>
-	    		</div>
-	    	</div>
-
-	    	<div class="modal" id="gate">
-	    		<div class="modal-dialog bg-white">
-	    			<div class="modal-header">
-	    				<h1 class="modal-title">Gate</h1>
-	    				<button class="btn btn-close" dismiss="modal"></button>
-	    			</div>
-
-	    			<div class="modal-body">
-	    				<image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
-	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	    			</div>
-
-	    			<div class="modal-footer">
-	    				<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-	    			</div>
-	    		</div>
-
-	    	</div>
-
-	    	<div class="modal" id="solar">
-	    		<div class="modal-dialog bg-white">
-	    			<div class="modal-header">
-	    				<h1 class="modal-title">Solar</h1>
-	    				<button class="btn btn-close" dismiss="modal"></button>
-	    			</div>
-
-	    			<div class="modal-body">
-	    				<image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
-	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	    			</div>
-
-	    			<div class="modal-footer">
-	    				<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-	    			</div>
-	    		</div>
-
-	    	</div>
-
-	    	<div class="modal" id="intercom">
-	    		<div class="modal-dialog bg-white">
-	    			<div class="modal-header">
-	    				<h1 class="modal-title">Intercom</h1>
-	    				<button class="btn btn-close" dismiss="modal"></button>
-	    			</div>
-
-	    			<div class="modal-body">
-	    				<image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
-	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	    			</div>
-
-	    			<div class="modal-footer">
-	    				<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-	    			</div>
-	    		</div>
-
-	    	</div>
-
-	    	<div class="modal" id="aircon">
-	    		<div class="modal-dialog bg-white">
-	    			<div class="modal-header">
-	    				<h1 class="modal-title">Aircon</h1>
-	    				<button class="btn btn-close" dismiss="modal"></button>
-	    			</div>
-
-	    			<div class="modal-body">
-	    				<image src="alpha-images/kudas-camera.jpeg" style="height: 5rem; width: 5rem;">
-	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	    				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	    			</div>
-
-	    			<div class="modal-footer">
-	    				<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-	    			</div>
-	    		</div>
-
-	    	</div>
-
-	    </div>
-
-    </div>
-
-    <div class="min-vh-80 " style="background-color:rgba(0, 188, 212, 1.0);">
-    	<div class="container">
-	    	<div class="row">
-	    		<div class="col">
-	    			<img src="alpha-images/logo.png" style="height:100px; float: left; margin-left: 1rem;">
-	    			<p class="text" style="color: rgba(55, 55, 55, 1.0);">
-	    				We specialise in surveillance<br>and everything electrical,<br> bringing quality work to our customers.
-	    			</p>
-	    		</div>
-	    		
-	    	</div>
-        </div>
-		<p class="text-white" style="margin-left: 1rem">
-			<br>
-			<br>
-			<b>Business hours</b><br>
-			Weekdays:  7:00 - 18:00<br>
-			Saturdays: 8:00 - 13:00<br>
-			Sundays & Public holidays: Closed<br>
-			<br>
-
-			<b>Quick Links</b><br>
-			<a href="index.html">Home</a><br>
-			<a href="our-services.html">Our Services</a><br>
-			<a href="about-us.html">About us</a><br>
-			<br>
-
-
-			<b>Contact Us</b><br>
-			<i class="fas fa-phone"></i>073 472 7969<br>
-			<i class="fab fa-whatsapp"></i>000 000 0000<br>
-			<i class="fas fa-envelope"></i>tnyakuseka@gmail.com<br>
-			<br>
-
-
-			<b>Location</b><br>
-			<i class="fas fa-location"></i>21 Lincluden Rd Rugby, Cape Town 7440
-			<br>
-			<br>
-
-		</p>
-
-		<footer class="background  " style="background-color: rgba(0, 188, 212, 1.0);">
-	
-		Copyright &copy; 2025 ALPHA HANDYMAN. All Rights Reserved
-	
-        </footer>
-	</div>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="alpha-styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="alpha-styles/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="alpha-styles/all.min.css">
+  
+  <title>popup</title>
+  <script src="alpha-scripts/bootstrap.bundle.js"></script>
+  <script src="https://kit.fontawesome.com/013c25fe14.js" crossorigin="anonymous"></script>
+  <style>
+
+    
+    /** {
+      outline: 1px solid red !important;
+    }*/
+    .card {
+      transform: scale(0.8);
+    }
+    .card:hover {
+      transform: scale(0.9);
+    }
+
+    #request-button:hover {
+      transform: translateY(-10px);
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+
+    #contact{
+      text-decoration: none;
+    }
+  
+
+    .container .wrapper {
+      width: 90%;
+      max-width: 600px;
+      height: 300px;
+      box-shadow: 10px 10px 10px ;
+      margin: 0 auto;
+      /*margin-right: 200px; commenting it out cause it does nothing*/
+      overflow: hidden;/*i need this so that when the images slide out they are hidden and dont show a strip on my page*/
+      
+    }
+
+    .container .wrapper-holder {
+      display: grid;
+      grid-template-columns: repeat(4, 100%);
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      animation: slider 30s ease-in-out infinite;
+      
+    }
+
+    .container .wrapper-holder div {
+      background-position: center !important;
+      background-size: contain;
+      background-repeat: no-repeat !important;/*need this , without it the images i put repeat if they cant fit within the space*/
+      background-color: transparent;
+      
+    }
+
+
+
+    .container #slider-img-1 {
+      background-image: url("alpha-images/kudas-monitoring.jpeg");
+      background-position: center;
+      background-size: contain;/*this is essential for me as it helps keep the whole image within its specified block*/
+      background-repeat: no-repeat;
+      
+    }
+
+    .container #slider-img-2 {
+      background-image: url("alpha-images/kudas-advert.jpeg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .container #slider-img-3 {
+      background-image: url("alpha-images/kudas-camera.jpeg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .container #slider-img-4 {
+      background-image: url("alpha-images/kudas-ecbox.jpeg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .button-holder {
+      position: relative;
+      text-align: center;
+      margin-top: 10px;
+      z-index: 5;
+    }/*i need this reference , without it i cant even get the bottom buttons for sliding*/
+
+    .container .button-holder .button {
+      background-color: white;
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      display: inline-block;
+      margin: .3rem;
+    }
+
+    .container .button-holder{
+      position: absolute;
+      left: 45%; 
+      bottom: 0%;
+    }
+
+    .button:hover{
+      box-shadow: 0px 0px 7px 4px rgba(0, 255, 255, 0.6);
+    }
+
+    @keyframes slider{
+      0%{transform: translateX(0%);}
+      10%{transform: translateX(-100%);}
+      20%{transform: translateX(-100%);}
+      30%{transform: translateX(-200%);}
+      40%{transform: translateX(-200%);}
+      50%{transform: translateX(-200%);}
+      60%{transform: translateX(-300%);}
+      70%{transform: translateX(-300%);}
+      80%{transform: translateX(-300%);}
+      90%{transform: translateX(0%);}
+      100%{transform: translateX(0%);}
+    }
 
 
 
     
+
+  </style>
+</head>
+<body>
+
+  <a href="https://wa.me/27734727969?text=Hello%20I%20am%20interested%20in%20your%20products" target="_blank_" style="color: #25D366; font-size: 50px; bottom: 0; right: 0; position: fixed;">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <div class="bg-image min-vh-100" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('alpha-images/roof-camera.jpg');background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;">
+
+          <!--Navbar begin-->
+
+    <div class="navbar navbar-expanded-md navbar-dark bg-info">
+      <div class="container">
+        <a href="index.html" class="navbar-brand" style="text-decoration: none;">
+          <img src="alpha-images/logo.png" class="img-fluid" style="height: 8rem;">
+          <p class="bg-secondary mt-1">ALPHA HANDYMAN</p>
+        </a>
+        <button class="navbar-toggler bg-secondary" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
+            <div class="navbar-toggler-icon"></div>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul>
+            <div class="mb-1"><a href="index.html">Home</a></div>
+            <div class="mb-1"><a href="our-services.html">Our Services</a></div>
+            <div class="mb-1"><a href="about-us.html">About us</a></div>
+            <div class="mb-1"><a href="contact-us.html">Contact us</a></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="card">
+      <div class="card-body bg-info">
+        <img  class="bg-img img-fluid" src="alpha-images/logo.png" style="height: 8rem; ">
+        <p class="bg-info text-white" data-bs-toggle="modal" data-bs-target="#menu" >Menu</p>
+      </div>
+    </div>-->
+
+    <!--Modal begin-->
+
+    <!--<div class="modal" id="menu">
+      <div class="modal-dialog bg-secondary">
+        <div class="modal-body">
+          <div class="row ">
+            <div class="col-12 text-white display-3 mb-2">
+              Home
+            </div>
+             <div class="col-12 text-white display-3 mb-2">
+              Home
+            </div>
+             <div class="col-12 text-white display-3 mb-2">
+              Home
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+  
+    <div class="container">
+       <h2 class="text-white" style="font-size: 5rem;">Quality &<br>Trusted Work</h2>
+      <h3 class="display-3 mt-2 text-white" style="">Guaranteed work by skilled<br> professionals since 2017</h3>
+    </div>
+  </div>
+
+  <div class="bg-image min-vh-100" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('alpha-images/roof-camera.jpg');background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;">
+
+          <!--Navbar begin-->
+
+    <!--<div class="navbar navbar-expanded-md navbar-dark bg-info">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="alpha-images/logo.png" class="img-fluid" style="height: 8rem;">
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
+            <div class="navbar-toggler-icon"></div>
+        </button>
+        <div class="collapse navbar-collapse" id="nav"></div>
+      </div>
+    </div>-->
+
+    <div class="card">
+      <div class="card-body bg-info">
+        <img  class="bg-img img-fluid" src="alpha-images/logo.png" style="height: 8rem; ">
+        <p class="bg-info text-white" data-bs-toggle="modal" data-bs-target="#menu" >Menu</p>
+      </div>
+    </div>
+
+    <!--Modal begin-->
+
+    <div class="modal" id="menu">
+      <div class="modal-dialog bg-secondary">
+        <div class="modal-body">
+          <div class="row ">
+            <div class="col-12 text-white display-3 mb-2">
+              Home
+            </div>
+             <div class="col-12 text-white display-3 mb-2">
+              Home
+            </div>
+             <div class="col-12 text-white display-3 mb-2">
+              Home
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container">
+       <h2 class="text-white" style="font-size: 5rem;">Quality &<br>Trusted Work</h2>
+      <h3 class="display-3 mt-2 text-white" style="">Guaranteed work by skilled<br> professionals since 2017</h3>
+    </div>
+  </div>
+
+  <div class="background  " style="background-color: rgba(0, 188, 212, 1.0);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-9 text-white ">
+          <h1 style="margin-top: 1.5rem;
+          background-color: grey;">ALPHA HANDYMAN</h1>
+
+        </div>
+        <div class="col-12 col-md-3">
+          <img src="alpha-images/logo.png" class="img-fluid w-100" style="height: 10rem;">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3 col-md-2 text-white" style="margin-top: 1.2rem; margin-left: 1rem;">
+          <a href="our-services.html">Our services</a>
+        </div>
+        <div class=" col-3 col-md-2 text-white" style="margin-top: 1.2rem;">
+          <a href="about-us.html">About us</a>
+        </div>
+        <div class="col-3 col-md-2 text-white" style="margin-top: 1.2rem;">
+          <a href="contact-us.html">Contact us</a>
+        </div>
+      </div>
+     </div>
+
+  </div>
+
+  <div class="background " style="height: 10px; background-color: rgba(55, 55, 55, 0.5);">
+  </div>
+
+  <div class="bg-image img-fluid   " style="min-height: 75vh; background-image: url('alpha-images/roof-camera.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;">
+      <h2 class="" style="font-size: 5rem; margin-left: 1rem;">Quality &<br>Trusted Work</h2>
+    <h3 class="display-3 mt-2" style=" margin-left: 1rem;">Guaranteed work by skilled<br> professionals since 2017</h3>
+  </div>
+
+    <div class="bg-image min-vh-100 " style="background-image: url('alpha-images/AnotherCamera.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;">
+  <h4 class="display-4" style="color: rgba(0, 188, 215, 1.0);
+    margin-left: 1.5rem;">Electrical and security installation specialists</h4>
+  <p class="lead" style="margin-left: 1.5rem;">Alpha handyman prides itself in quality work, with skilled technicians at your service.<br> We specialise in everything electrical, and excel at security servalliance.<br>Bringing safety and assurrance to those seeking servaillance solutions.<br>We also have a good reputation for installing electrical gates<br>as well as solar systems for those seeking to have a sort of<br> independance from the main south african grid.</p>
+
+  
+    <div class="container">
+    <div class="row ">
+      <!-- I assume mx-auto means automatic margin on x-axis -->
+      <div class="col-11 col-md-4 mx-auto mb-3 bg-white" style=" border-radius: 1.5rem;
+      padding: 1rem; height: fit-content;">
+        <p>We offer maintanance to help keep operations and processes at optimal condition and reduce down time and consultancy.<br>
+        </p>
+
+        <a href="#quote-form">
+          <button id="request-button" class="w-100 "style="background-color: rgba(0, 188, 215, 1.0);
+        padding: 20px;
+        border-radius: 1.5rem;
+        ">REQUEST A QUOTE
+        </button>
+        </a>
+        
+        
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+        <div class="container" style="">
+          <div class="wrapper">
+            <div class="wrapper-holder">
+              <div id="slider-img-1"></div>
+              <div id="slider-img-2"></div>
+              <div id="slider-img-3"></div>
+              <div id="slider-img-4"></div>
+            </div>
+          </div>
+            </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+  
+
+    <div class="min-vh-100 " style="background-color:rgba(55, 55, 55, 0.8);">
+
+
+      <div class="d-flex justify-content-center align-items-center mb-5">
+        <h5 class="text text-white"style="font-size: 4rem;">Areas of Focus</h5>
+      </div>
+
+      <div class="container">
+      
+        <div class="row">
+          <div class="col-12 col-md-4">
+            
+            <div class="card" data-bs-target="#surveillance" data-bs-toggle="modal"  >
+
+              <div class="card-body">
+                <h6 class="card-header bg-primary lead">Surveillance</h6>
+                <img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
+              </div>
+              
+              </div>
+            
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card"  data-bs-target="#gate" data-bs-toggle="modal" >
+
+              <div class="card-body">
+                <h6 class="card-header bg-danger lead">Gate Installation</h6>
+                <img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
+              </div>
+              </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card" data-bs-target="#solar" data-bs-toggle="modal" >
+              
+
+              <div class="card-body">
+                <h6 class="card-header bg-warning lead">Solar installation</h6>
+                <img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
+                <div class="card-text">tap for more info</div>
+              </div>
+              </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card" data-bs-target="#aircon" data-bs-toggle="modal" >
+              
+
+              <div class="card-body">
+                <h6 class="card-header bg-warning lead">Aircon</h6>
+                <img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
+                <div class="card-text">tap for more info</div>
+              </div>
+              </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card" data-bs-target="#intercom" data-bs-toggle="modal" >
+              
+
+              <div class="card-body">
+                <h6 class="card-header bg-warning lead">Intercom</h6>
+                <img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
+                <div class="card-text">tap for more info</div>
+              </div>
+              </div>
+          </div>
+
+           <div class="col-12 col-md-4">
+            <div class="card" data-bs-target="#pool" data-bs-toggle="modal" >
+              
+
+              <div class="card-body">
+                <h6 class="card-header bg-warning lead">Pools</h6>
+                <img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
+                <div class="card-text">tap for more info</div>
+              </div>
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+            <!--<div class="container">
+          <div class="row flex-column justify-content-center align-items-center ">
+            <div class="col-6 mb-5 bg-info rounded-5">
+              <button class="btn text-grey " data-bs-toggle="modal" data-bs-target="" style="font-size: 3rem;">Surveillance</button>
+            </div>
+
+            <div class="col-6 mb-5 bg-secondary rounded-5 ">
+              <button class="btn text-info px-6" data-bs-toggle="modal" data-bs-target="#gate" style="font-size: 3rem;">Gate</button>
+            </div>
+
+            <div class="col-6 mb-5 bg-info rounded-5">
+              <button class="btn text-grey px-5" data-bs-toggle="modal" data-bs-target="#solar" style="font-size: 3rem;">Solar</button>
+            </div>
+
+            <div class="col-6 mb-5 bg-secondary rounded-5">
+              <button class="btn text-info" data-bs-toggle="modal" data-bs-target="#intercom" style="font-size: 3rem;">Intercom</button>
+            </div>
+
+            <div class="col-6 mb-5 bg-info rounded-5">
+              <button class="btn text-grey" data-bs-toggle="modal" data-bs-target="#aircon" style="font-size: 3rem;">Aircon</button>
+            </div>
+          </div>
+          </div>-->
+
+        <div class="modal" id="surveillance">
+          <div class="modal-dialog bg-white">
+            <div class="modal-header">
+              <h1 class="modal-title">Surveillance</h1>
+              <button class="btn btn-close" dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+              <image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
+              <p>Enhance your property’s security with our high-definition surveillance solutions. We specialize in the installation of smart IP cameras, remote mobile monitoring, and advanced motion detection systems. Whether for your home or business, we provide 24/7 visibility and secure digital recording to ensure you always have peace of mind.</p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="gate">
+          <div class="modal-dialog bg-white">
+            <div class="modal-header">
+              <h1 class="modal-title">Gate</h1>
+              <button class="btn btn-close" dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+              <image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
+              <p>Secure your perimeter with our professional gate automation and repair services. we handle everything from sliding gate motors to swing gate actuators, ensuring smooth and reliable access control. Our team focuses on safety features, battery backups, and durable hardware to keep your entrance functioning perfectly in any weather condition.</p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal" id="solar">
+          <div class="modal-dialog bg-white">
+            <div class="modal-header">
+              <h1 class="modal-title">Solar</h1>
+              <button class="btn btn-close" dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+              <image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
+              <p>Switch to sustainable power with our comprehensive solar energy installations. We offer custom-designed photovoltaic systems, including high-efficiency panels, lithium-ion battery storage, and hybrid inverters. Reduce your monthly electricity costs and protect your home from power outages with our clean, reliable, and expertly maintained renewable energy solutions.</p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal" id="intercom">
+          <div class="modal-dialog bg-white">
+            <div class="modal-header">
+              <h1 class="modal-title">Intercom</h1>
+              <button class="btn btn-close" dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+              <image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
+              <p>Improve your site communication with our modern intercom and access control systems. From basic audio handsets to advanced video door stations with smartphone integration, we provide clear and secure ways to screen visitors. We install, repair, and upgrade all major brands to ensure your property remains both accessible and protected.</p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal" id="aircon">
+          <div class="modal-dialog bg-white">
+            <div class="modal-header">
+              <h1 class="modal-title">Aircon</h1>
+              <button class="btn btn-close" dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+              <image src="alpha-images/kudas-camera.jpeg" style="height: 5rem; width: 5rem;">
+              <p>Stay comfortable year-round with our expert air conditioning services. We specialize in the installation and repair of split units, cassettes, and ducted systems. We offer emergency gas refills, deep cleaning, and routine maintenance for all major brands, using only genuine parts to ensure maximum cooling efficiency and long-term reliability.</p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+
+         <div class="modal" id="pool">
+          <div class="modal-dialog bg-white">
+            <div class="modal-header">
+              <h1 class="modal-title">Pools</h1>
+              <button class="btn btn-close" dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+              <image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
+              <p>Keep your swimming pool crystal clear with our professional maintenance and repair solutions. We handle pump installations, sand filter changes, salt chlorinator repairs, and leak detection. Our team ensures your water chemistry is perfectly balanced and your equipment is running efficiently, allowing you to enjoy a pristine pool without the hassle.</p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--SUBMISSION FORM-->
+
+    <div class=" min-vh-50 bg-info">
+      <section id="quote-form">
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <form  name="quote-request" method="POST" data-netlify="true">
+                <div class="">Name:</div>
+                <div class="mb-2"><input class="w-50" type="text" name="name" placeholder="name" required></div>
+                <div class="text">Email:</div>
+                <div class="mb-2"><input class="w-50" type="email" name="email" placeholder="email" required></div>
+                <div class="text">Phone:</div>
+                <div class="mb-2"><input class="w-50" type="tel" name="phone" placeholder="phone" required></div>
+                
+                <div class="text-white">Service:</div>
+                <div class="mb-2">
+                  <select class="w-50" name="service">
+                    <option>Solar</option>
+                    <option>Surveillance</option>
+                    <option>Aircon</option>
+                    <option>Gate</option>
+                    <option>Intercom</option>
+                    <option>Pool</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div class="mb-2"><textarea class="w-100" name="details" placeholder="additional info"></textarea></div>
+
+                <div><button type="submit">Submit</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--END OF PAGE-->
+
+    <div class="min-vh-80 " style="background-color:rgba(0, 188, 212, 1.0);">
+      <div class="container">
+        <div class="row">
+          <div class="col p-2">
+            <img src="alpha-images/logo.png" style="height:100px; float: left; margin-left: 1rem;">
+            <p class="text" style="color: rgba(55, 55, 55, 1.0);">
+              We specialise in surveillance<br>and everything electrical,<br> bringing quality work to our customers.
+            </p>
+          </div>
+          
+        </div>
+        </div>
+    <p class="text-white" style="margin-left: 1rem">
+      <br>
+      <br>
+      <b>Business hours</b><br>
+      Weekdays:  7:00 - 18:00<br>
+      Saturdays: 8:00 - 13:00<br>
+      Sundays & Public holidays: Closed<br>
+      <br>
+
+      <b>Quick Links</b><br>
+      <a href="index.html">Home</a><br>
+      <a href="our-services.html">Our Services</a><br>
+      <a href="about-us.html">About us</a><br>
+      <br>
+
+
+      <b>Contact Us</b><br>
+      <i class="fas fa-phone"></i>073 472 7969<br>
+      <i class="fab fa-whatsapp"></i>000 000 0000<br>
+      <i class="fas fa-envelope"></i>tnyakuseka@gmail.com<br>
+      <br>
+
+
+      <b>Location</b><br>
+      <i class="fas fa-location"></i>21 Lincluden Rd Rugby, Cape Town 7440
+      <br>
+      <br>
+
+    </p>
+
+    <footer class="background  " style="background-color: rgba(0, 188, 212, 1.0);">
+  
+    Copyright &copy; 2025 ALPHA HANDYMAN. All Rights Reserved
+  
+        </footer>
+  </div>
+
+
+
+
 </body>
 </html> 
