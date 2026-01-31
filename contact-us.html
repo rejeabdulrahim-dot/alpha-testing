@@ -36,6 +36,18 @@
 		#contact:hover{
 			text-decoration: none;
 		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {opacity: 1}
+		}
+
+		.card {
+			animation: fadeIn 1.5s ease-in-out;
+		}
 	
 
 		
@@ -73,16 +85,15 @@
 	</div>
 
 
-	<div class="bg-image  min-vh-100 " style="background-image: url('alpha-images/DrillCamera.jpeg');
+	<div class="bg-image  min-vh-100 " style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('alpha-images/DrillCamera.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;">
         
         <div class="container">
-	    	<div class="row mb-5" >
-	    		<div class="card  align-items-center" style="padding: ;
-	    		background: linear-gradient(to top,rgba(0,188,212,1.0), rgba(55,55,55,1.0));">
-	    			 <div class="text text-white" style="font-size: 2rem;"><b>Feel free to Contact us<br>We would love to hear from you</b></div>
+	    	<div class="row mb-5" style="" >
+	    		<div class="card  align-items-center">
+	    			 <div class="text text-secondary" style="font-size: 2rem;"><b>Contact us<br>We would love to hear from you</b></div>
 	    		</div>
 	    	</div>	
 
