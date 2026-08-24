@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<meta name="description" content="We are ALPHA HANDYMAN and we pride ourselves in quality work. We do everything electrical from surveillance, solar and gate installation all the way to intercoms">-->
+  <!--<meta name="description" content="We are NOZULU PROJECTS and we pride ourselves in quality work. We do everything electrical from surveillance, solar and gate installation all the way to intercoms">-->
   <!--<meta name="keywords" content="CCTV, Surveillance, Wifi Camera Electrical, Electrical Techincians, Gate installation, Intercom, Pool, ">-->
   <meta name="author" content="ABDUL-RAHIM REJE">
   <meta http-equiv="refresh" content="60">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="alpha-styles/bootstrap-grid.css">
   <link rel="stylesheet" type="text/css" href="alpha-styles/all.min.css">
   
-  <title>The best Electrical technincians in the Western Cape | ALPHA HANDYMAN</title>
+  <title>The best Electrical technincians in the Western Cape | NOZULU PROJECTS</title>
   <script src="alpha-scripts/bootstrap.bundle.js"></script>
   <script src="https://kit.fontawesome.com/013c25fe14.js" crossorigin="anonymous"></script>
   <style>
@@ -168,6 +168,186 @@
     .card {
       height: 100%;
     }
+
+    /*From down on is just the Quotes css, its a lot LOL*/
+
+    .quote-section {
+      position: relative;
+      padding: 6rem 0;
+      background: linear-gradient(135deg, var(--brand-darker) 0%, var(--brand) 55%, var(--brand-light) 130%);
+      overflow: hidden;
+    }
+    .quote-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 15% 20%, rgba(255,255,255,0.12) 0, transparent 40%),
+                         radial-gradient(circle at 85% 80%, rgba(0,0,0,0.15) 0, transparent 45%);
+      pointer-events: none;
+    }
+    .quote-section .container {
+      position: relative;
+      z-index: 1;
+    }
+    .quote-info .hero-eyebrow { color: rgba(255,255,255,0.95); }
+    .quote-info .hero-eyebrow::before { background: rgba(255,255,255,0.95); }
+    .quote-info h3 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      color: white;
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      line-height: 1.15;
+    }
+    .quote-info p {
+      color: rgba(255,255,255,0.92);
+      font-size: 1.05rem;
+      max-width: 30rem;
+    }
+    .quote-perks {
+      list-style: none;
+      padding: 0;
+      margin: 1.75rem 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+    }
+    .quote-perks li {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      color: white;
+      font-weight: 600;
+    }
+    .quote-perks li i {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.18);
+      border-radius: 50%;
+      font-size: .95rem;
+    }
+
+    .form-card {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 25px 60px rgba(0,40,45,0.35);
+      padding: 2.25rem;
+    }
+    .form-card h4 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .3rem;
+    }
+    .form-card .form-subtext {
+      color: #6b6b6b;
+      font-size: .95rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .form-field {
+      position: relative;
+      margin-bottom: 1.4rem;
+    }
+    .form-field label {
+      display: block;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--brand-darker);
+      margin-bottom: .4rem;
+    }
+    .form-field .field-icon-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .form-field .field-icon-wrap i {
+      position: absolute;
+      left: 1rem;
+      color: #9aa0a3;
+      font-size: .95rem;
+      pointer-events: none;
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      border: 1.5px solid #e3e7e8;
+      background: #f7fafb;
+      border-radius: .75rem;
+      padding: .8rem 1rem .8rem 2.6rem;
+      font-family: 'Manrope', sans-serif;
+      font-size: .98rem;
+      color: var(--ink);
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .form-field textarea {
+      padding-left: 1rem;
+      min-height: 110px;
+      resize: vertical;
+    }
+    .form-field select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23009bb0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1rem;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--brand);
+      background: white;
+      box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.15);
+    }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #a6adb0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 1.25rem;
+    }
+    @media (max-width: 575px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-darker) 100%);
+      color: white;
+      border: none;
+      font-weight: 700;
+      letter-spacing: .03em;
+      font-size: 1rem;
+      border-radius: .85rem;
+      padding: 1rem;
+      box-shadow: 0 14px 28px rgba(0, 188, 212, 0.35);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .form-submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 34px rgba(0, 188, 212, 0.45);
+    }
+    .form-note {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      color: #8a9194;
+      font-size: .82rem;
+      margin-top: 1rem;
+    }
     
 
   </style>
@@ -188,7 +368,7 @@
       <div class="container">
         <a href="index.html" class="navbar-brand" style="text-decoration: none;">
           <img src="alpha-images/logo.pngs" class="img-fluid" style="height: 8rem;">
-          <p class="bg-secondary mt-1">COMPANY NAME</p>
+          <p class="bg-secondary mt-1">NOZULU PROJECTS</p>
         </a>
         <button class="navbar-toggler bg-secondary" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
             <div class="navbar-toggler-icon"></div>
@@ -206,7 +386,7 @@
 
     <!--<div class="card">
       <div class="card-body bg-info">
-        <img  class="bg-img img-fluid" src="alpha-images/logo.png" style="height: 8rem; ">
+        <img  class="bg-img img-fluid" src="alpha-images-logo.png" style="height: 8rem; ">
         <p class="bg-info text-white" data-bs-toggle="modal" data-bs-target="#menu" >Menu</p>
       </div>
     </div>-->
@@ -243,7 +423,7 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-9 text-white ">
           <h1 style="margin-top: 1.5rem;
-          background-color: grey;">ALPHA HANDYMAN</h1>
+          background-color: grey;">NOZULU PROJECTS</h1>
 
         </div>
         <div class="col-12 col-md-3">
@@ -599,37 +779,85 @@
 
     <!--SUBMISSION FORM-->
 
-    <div class=" min-vh-50 bg-info">
+    <div class="quote-section">
       <section id="quote-form">
         <div class="container">
-          <div class="card">
-            <div class="card-body">
-              <form  name="quote-request" method="POST" data-netlify="true">
-                <div class="">Name:</div>
-                <div class="mb-2"><input class="w-50" type="text" name="name" placeholder="name" required></div>
-                <div class="text">Email:</div>
-                <div class="mb-2"><input class="w-50" type="email" name="email" placeholder="email" required></div>
-                <div class="text">Phone:</div>
-                <div class="mb-2"><input class="w-50" type="tel" name="phone" placeholder="phone" required></div>
-                
-                <div class="text-white">Service:</div>
-                <div class="mb-2">
-                  <select class="w-50" name="service">
-                    <option>Solar</option>
-                    <option>Surveillance</option>
-                    <option>Aircon</option>
-                    <option>Gate</option>
-                    <option>Intercom</option>
-                    <option>Pool</option>
-                    <option>Other</option>
-                  </select>
-                </div>
+          <div class="row align-items-center g-5">
 
-                <div class="mb-2"><textarea class="w-100" name="details" placeholder="additional info"></textarea></div>
-
-                <div><button type="submit">Submit</button></div>
-              </form>
+            <div class="col-12 col-lg-5 quote-info">
+              <div class="hero-eyebrow">Free, no-obligation quote</div>
+              <h3>Tell us what you need &mdash; we'll take it from there</h3>
+              <p>Fill in a few details about your project and one of our technicians will get back to you to confirm timing and pricing.</p>
+              <ul class="quote-perks">
+                <li><i class="fas fa-bolt"></i> Fast response, usually same day</li>
+                <li><i class="fas fa-user-check"></i> Skilled, experienced technicians</li>
+                <li><i class="fas fa-shield-halved"></i> Quality work guaranteed</li>
+              </ul>
             </div>
+
+            <div class="col-12 col-lg-7">
+              <div class="form-card">
+                <h4>Request a quote</h4>
+                <p class="form-subtext">Tell us a bit about the job and we'll get back to you shortly.</p>
+
+                <form name="quote-request" method="POST" data-netlify="true">
+                  <input type="hidden" name="form-name" value="quote-request">
+
+                  <div class="form-grid">
+                    <div class="form-field">
+                      <label for="name">Name</label>
+                      <div class="field-icon-wrap">
+                        <i class="fas fa-user"></i>
+                        <input id="name" type="text" name="name" placeholder="Your full name" required>
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="phone">Phone</label>
+                      <div class="field-icon-wrap">
+                        <i class="fas fa-phone"></i>
+                        <input id="phone" type="tel" name="phone" placeholder="Your phone number" required>
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="email">Email</label>
+                      <div class="field-icon-wrap">
+                        <i class="fas fa-envelope"></i>
+                        <input id="email" type="email" name="email" placeholder="you@example.com" required>
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="service">Service</label>
+                      <div class="field-icon-wrap">
+                        <select id="service" name="service">
+                          <option>Solar</option>
+                          <option>Surveillance</option>
+                          <option>Aircon</option>
+                          <option>Gate</option>
+                          <option>Intercom</option>
+                          <option>Pool</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="details">Additional info</label>
+                    <div class="field-icon-wrap">
+                      <textarea id="details" name="details" placeholder="Tell us a little more about the job&hellip;"></textarea>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="form-submit-btn">Submit request <i class="fas fa-paper-plane ms-2"></i></button>
+
+                  <div class="form-note"><i class="fas fa-lock"></i> Your details are only used to prepare your quote.</div>
+                </form>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -641,7 +869,7 @@
       <div class="container">
         <div class="row">
           <div class="col p-2">
-            <img src="alpha-images/logo.pngs" style="height:100px; float: left; margin-left: 1rem;">
+            <img src="alpha-images-logo.pngs" style="height:100px; float: left; margin-left: 1rem;">
             <p class="text" style="color: rgba(55, 55, 55, 1.0);">
               We specialise in surveillance<br>and everything electrical,<br> bringing quality work to our customers.
             </p>
@@ -666,14 +894,14 @@
 
 
       <b>Contact Us</b><br>
-      <i class="fas fa-phone"></i>000 000 0000<br>
-      <i class="fab fa-whatsapp"></i>000 000 000<br>
-      <i class="fas fa-envelope"></i>rejeabdulrahim@gmail.com<br>
+      <i class="fas fa-phone"></i>073 881 3572<br>
+      <i class="fab fa-whatsapp"></i>073 769 7361<br>
+      <i class="fas fa-envelope"></i>mncekz@gmail.com<br>
       <br>
 
 
       <b>Location</b><br>
-      <i class="fas fa-location"></i>15 Tambourine Belhar Ext 7<!--21 Lincluden Rd Rugby, Cape Town 7440-->
+      <i class="fas fa-location"></i>57 Devon Rd Lansdowne Yorkshire Estate Capetown 7780
       <br>
       <br>
 
@@ -681,7 +909,7 @@
 
     <footer class="background  " style="background-color: rgba(0, 188, 212, 1.0);">
   
-    Copyright &copy; 2025 COMPANY NAME. All Rights Reserved
+    Copyright &copy; 2025 NOZULU PROJECT. All Rights Reserved
   
         </footer>
   </div>
