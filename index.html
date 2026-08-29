@@ -1,921 +1,961 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<meta name="description" content="We are NOZULU PROJECTS and we pride ourselves in quality work. We do everything electrical from surveillance, solar and gate installation all the way to intercoms">-->
-  <!--<meta name="keywords" content="CCTV, Surveillance, Wifi Camera Electrical, Electrical Techincians, Gate installation, Intercom, Pool, ">-->
-  <meta name="author" content="ABDUL-RAHIM REJE">
-  <meta http-equiv="refresh" content="60">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<meta name="description" content="We are NOZULU PROJECTS and we pride ourselves in quality work. We do everything electrical from surveillance, solar and gate installation all the way to intercoms">-->
+<!--<meta name="keywords" content="CCTV, Surveillance, Wifi Camera Electrical, Electrical Techincians, Gate installation, Intercom, Pool, ">-->
+<meta name="author" content="ABDUL-RAHIM REJE">
+<meta http-equiv="refresh" content="60">
 
 
-  <link rel="stylesheet" type="text/css" href="alpha-styles/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="alpha-styles/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="alpha-styles/all.min.css">
-  
-  <title>The best Electrical technincians in the Western Cape | NOZULU PROJECTS</title>
-  <script src="alpha-scripts/bootstrap.bundle.js"></script>
-  <script src="https://kit.fontawesome.com/013c25fe14.js" crossorigin="anonymous"></script>
-  <style>
+<link rel="stylesheet" type="text/css" href="alpha-styles/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="alpha-styles/bootstrap-grid.css">
+<link rel="stylesheet" type="text/css" href="alpha-styles/all.min.css">
+<title>The best Electrical technincians in the Western Cape | NOZULU PROJECTS</title>
+<script src="alpha-scripts/bootstrap.bundle.js"></script>
+<script src="https://kit.fontawesome.com/013c25fe14.js" crossorigin="anonymous"></script>
+<style>
 
-    
-    /** {
-      outline: 1px solid red !important;
-    }*/
-    .card {
-      transform: scale(0.8);
+/** {
+outline: 1px solid red !important;
+}*/
+.card {
+transform: scale(0.8);
+}
+.card:hover {
+transform: scale(0.9);
+}
+
+#request-button:hover {
+transform: translateY(-10px);
+}
+
+a {
+text-decoration: none;
+color: white;
+}
+
+a:hover{
+text-decoration: underline;
+}
+
+#contact{
+text-decoration: none;
+}
+
+.container .wrapper {
+width: 90%;
+max-width: 600px;
+height: 300px;
+box-shadow: 10px 10px 10px ;
+margin: 0 auto;
+/*margin-right: 200px; commenting it out cause it does nothing*/
+overflow: hidden;/*i need this so that when the images slide out they are hidden and dont show a strip on my page*/
+}
+
+.container .wrapper-holder {
+display: grid;
+grid-template-columns: repeat(6, 100%);
+height: 100%;
+width: 100%;
+object-fit: cover;
+animation: slider 45s ease-in-out infinite;
+}
+
+.container .wrapper-holder div {
+background-position: center !important;
+background-size: contain;
+background-repeat: no-repeat !important;/*need this , without it the images i put repeat if they cant fit within the space*/
+background-color: transparent;
+}
+
+
+
+.container #slider-img-1 {
+background-image: url("alpha-images/kudas-monitoring.jpeg");
+background-position: center;
+background-size: contain;/*this is essential for me as it helps keep the whole image within its specified block*/
+background-repeat: no-repeat;
+}
+
+.container #slider-img-2 {
+background-image: url("alpha-images/kudas-advert.jpegs");
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.container #slider-img-3 {
+background-image: url("alpha-images/kudas-camera.jpeg");
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.container #slider-img-4 {
+background-image: url("alpha-images/kudas-ecbox.jpeg");
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.container #slider-img-5 {
+background-image: url("alpha-images/kudas-pipes.jpeg");
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.container #slider-img-6 {
+background-image: url("alpha-images/kudas-old-gate.jpeg");
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+
+.button-holder {
+position: relative;
+text-align: center;
+margin-top: 10px;
+z-index: 5;
+}/*i need this reference , without it i cant even get the bottom buttons for sliding*/
+
+.container .button-holder .button {
+background-color: white;
+width: 15px;
+height: 15px;
+border-radius: 15px;
+display: inline-block;
+margin: .3rem;
+}
+
+.container .button-holder{
+position: absolute;
+left: 45%;
+bottom: 0%;
+}
+
+.button:hover{
+box-shadow: 0px 0px 7px 4px rgba(0, 255, 255, 0.6);
+}
+
+@keyframes slider{
+0%, 12%{transform: translateX(0%);}
+16%, 28%{transform: translateX(-100%);}
+32%, 44%{transform: translateX(-200%);}
+48%, 60%{transform: translateX(-300%);}
+64%, 76%{transform: translateX(-400%);}
+80%, 92%{transform: translateX(-500%);}
+100%{transform: translateX(0%);}
+}
+
+.card-img-top {
+width: 100%;
+height: 500px;
+object-fit: cover;
+object-position: center;
+}
+
+.card {
+height: 100%;
+}
+
+/*From down on is just the Quotes css, its a lot LOL*/
+
+.quote-section {
+position: relative;
+padding: 6rem 0;
+background: linear-gradient(135deg, var(--brand-darker) 0%, var(--brand) 55%, var(--brand-light) 130%);
+overflow: hidden;
+}
+.quote-section::before {
+content: "";
+position: absolute;
+inset: 0;
+background-image: radial-gradient(circle at 15% 20%, rgba(255,255,255,0.12) 0, transparent 40%),
+radial-gradient(circle at 85% 80%, rgba(0,0,0,0.15) 0, transparent 45%);
+pointer-events: none;
+}
+.quote-section .container {
+position: relative;
+z-index: 1;
+}
+.quote-info .hero-eyebrow { color: rgba(255,255,255,0.95); }
+.quote-info .hero-eyebrow::before { background: rgba(255,255,255,0.95); }
+.quote-info h3 {
+font-family: 'Sora', sans-serif;
+font-weight: 800;
+color: white;
+font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+line-height: 1.15;
+}
+.quote-info p {
+color: rgba(255,255,255,0.92);
+font-size: 1.05rem;
+max-width: 30rem;
+}
+.quote-perks {
+list-style: none;
+padding: 0;
+margin: 1.75rem 0 0;
+display: flex;
+flex-direction: column;
+gap: .9rem;
+}
+.quote-perks li {
+display: flex;
+align-items: center;
+gap: .75rem;
+color: white;
+font-weight: 600;
+}
+.quote-perks li i {
+width: 38px;
+height: 38px;
+flex: 0 0 38px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: rgba(255,255,255,0.18);
+border-radius: 50%;
+font-size: .95rem;
+}
+
+.form-card {
+background: rgba(255,255,255,0.92);
+backdrop-filter: blur(6px);
+border: 1px solid rgba(255,255,255,0.5);
+border-radius: var(--radius-lg);
+box-shadow: 0 25px 60px rgba(0,40,45,0.35);
+padding: 2.25rem;
+}
+.form-card h4 {
+font-family: 'Sora', sans-serif;
+font-weight: 700;
+color: var(--ink);
+margin-bottom: .3rem;
+}
+.form-card .form-subtext {
+color: #6b6b6b;
+font-size: .95rem;
+margin-bottom: 1.75rem;
+}
+
+.form-field {
+position: relative;
+margin-bottom: 1.4rem;
+}
+.form-field label {
+display: block;
+font-size: .8rem;
+font-weight: 700;
+letter-spacing: .04em;
+text-transform: uppercase;
+color: var(--brand-darker);
+margin-bottom: .4rem;
+}
+.form-field .field-icon-wrap {
+position: relative;
+display: flex;
+align-items: center;
+}
+.form-field .field-icon-wrap i {
+position: absolute;
+left: 1rem;
+color: #9aa0a3;
+font-size: .95rem;
+pointer-events: none;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+width: 100%;
+border: 1.5px solid #e3e7e8;
+background: #f7fafb;
+border-radius: .75rem;
+padding: .8rem 1rem .8rem 2.6rem;
+font-family: 'Manrope', sans-serif;
+font-size: .98rem;
+color: var(--ink);
+transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.form-field textarea {
+padding-left: 1rem;
+min-height: 110px;
+resize: vertical;
+}
+.form-field select {
+appearance: none;
+-webkit-appearance: none;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www\.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23009bb0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-position: right 1rem center;
+background-size: 1rem;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+outline: none;
+border-color: var(--brand);
+background: white;
+box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.15);
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+color: #a6adb0;
+}
+
+.form-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0 1.25rem;
+}
+@media (max-width: 575px) {
+.form-grid { grid-template-columns: 1fr; }
+}
+
+.form-submit-btn {
+width: 100%;
+background: linear-gradient(135deg, var(--brand) 0%, var(--brand-darker) 100%);
+color: white;
+border: none;
+font-weight: 700;
+letter-spacing: .03em;
+font-size: 1rem;
+border-radius: .85rem;
+padding: 1rem;
+box-shadow: 0 14px 28px rgba(0, 188, 212, 0.35);
+transition: transform .2s ease, box-shadow .2s ease;
+}
+.form-submit-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 18px 34px rgba(0, 188, 212, 0.45);
+}
+.form-note {
+display: flex;
+align-items: center;
+gap: .5rem;
+color: #8a9194;
+font-size: .82rem;
+margin-top: 1rem;
+}
+
+
+    /* FAQ section */
+    .faq-section {
+      padding: 4.5rem 0;
+      background: #f5f7f8;
     }
-    .card:hover {
-      transform: scale(0.9);
-    }
 
-    #request-button:hover {
-      transform: translateY(-10px);
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-    }
-
-    a:hover{
-      text-decoration: underline;
-    }
-
-    #contact{
-      text-decoration: none;
-    }
-  
-
-    .container .wrapper {
-      width: 90%;
-      max-width: 600px;
-      height: 300px;
-      box-shadow: 10px 10px 10px ;
-      margin: 0 auto;
-      /*margin-right: 200px; commenting it out cause it does nothing*/
-      overflow: hidden;/*i need this so that when the images slide out they are hidden and dont show a strip on my page*/
-      
-    }
-
-    .container .wrapper-holder {
-      display: grid;
-      grid-template-columns: repeat(6, 100%);
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      animation: slider 45s ease-in-out infinite;
-      
-    }
-
-    .container .wrapper-holder div {
-      background-position: center !important;
-      background-size: contain;
-      background-repeat: no-repeat !important;/*need this , without it the images i put repeat if they cant fit within the space*/
-      background-color: transparent;
-      
-    }
-
-
-
-    .container #slider-img-1 {
-      background-image: url("alpha-images/kudas-monitoring.jpeg");
-      background-position: center;
-      background-size: contain;/*this is essential for me as it helps keep the whole image within its specified block*/
-      background-repeat: no-repeat;
-      
-    }
-
-    .container #slider-img-2 {
-      background-image: url("alpha-images/kudas-advert.jpeg");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    .container #slider-img-3 {
-      background-image: url("alpha-images/kudas-camera.jpeg");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    .container #slider-img-4 {
-      background-image: url("alpha-images/kudas-ecbox.jpeg");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    .container #slider-img-5 {
-      background-image: url("alpha-images/kudas-pipes.jpeg");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    .container #slider-img-6 {
-      background-image: url("alpha-images/kudas-old-gate.jpeg");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-
-    .button-holder {
-      position: relative;
+    .faq-heading {
+      max-width: 720px;
+      margin: 0 auto 2rem;
       text-align: center;
-      margin-top: 10px;
-      z-index: 5;
-    }/*i need this reference , without it i cant even get the bottom buttons for sliding*/
-
-    .container .button-holder .button {
-      background-color: white;
-      width: 15px;
-      height: 15px;
-      border-radius: 15px;
-      display: inline-block;
-      margin: .3rem;
     }
 
-    .container .button-holder{
-      position: absolute;
-      left: 45%; 
-      bottom: 0%;
-    }
-
-    .button:hover{
-      box-shadow: 0px 0px 7px 4px rgba(0, 255, 255, 0.6);
-    }
-
-    @keyframes slider{
-      0%, 12%{transform: translateX(0%);}
-      16%, 28%{transform: translateX(-100%);}
-      32%, 44%{transform: translateX(-200%);}
-      48%, 60%{transform: translateX(-300%);}
-      64%, 76%{transform: translateX(-400%);}
-      80%, 92%{transform: translateX(-500%);}
-      100%{transform: translateX(0%);}
-    }
-
-    .card-img-top {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .card {
-      height: 100%;
-    }
-
-    /*From down on is just the Quotes css, its a lot LOL*/
-
-    .quote-section {
-      position: relative;
-      padding: 6rem 0;
-      background: linear-gradient(135deg, var(--brand-darker) 0%, var(--brand) 55%, var(--brand-light) 130%);
-      overflow: hidden;
-    }
-    .quote-section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(circle at 15% 20%, rgba(255,255,255,0.12) 0, transparent 40%),
-                         radial-gradient(circle at 85% 80%, rgba(0,0,0,0.15) 0, transparent 45%);
-      pointer-events: none;
-    }
-    .quote-section .container {
-      position: relative;
-      z-index: 1;
-    }
-    .quote-info .hero-eyebrow { color: rgba(255,255,255,0.95); }
-    .quote-info .hero-eyebrow::before { background: rgba(255,255,255,0.95); }
-    .quote-info h3 {
+    .faq-heading h3 {
       font-family: 'Sora', sans-serif;
       font-weight: 800;
-      color: white;
-      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-      line-height: 1.15;
-    }
-    .quote-info p {
-      color: rgba(255,255,255,0.92);
-      font-size: 1.05rem;
-      max-width: 30rem;
-    }
-    .quote-perks {
-      list-style: none;
-      padding: 0;
-      margin: 1.75rem 0 0;
-      display: flex;
-      flex-direction: column;
-      gap: .9rem;
-    }
-    .quote-perks li {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      color: white;
-      font-weight: 600;
-    }
-    .quote-perks li i {
-      width: 38px;
-      height: 38px;
-      flex: 0 0 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255,255,255,0.18);
-      border-radius: 50%;
-      font-size: .95rem;
+      color: #263238;
+      margin-bottom: .65rem;
     }
 
-    .form-card {
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255,255,255,0.5);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 25px 60px rgba(0,40,45,0.35);
-      padding: 2.25rem;
-    }
-    .form-card h4 {
-      font-family: 'Sora', sans-serif;
-      font-weight: 700;
-      color: var(--ink);
-      margin-bottom: .3rem;
-    }
-    .form-card .form-subtext {
-      color: #6b6b6b;
-      font-size: .95rem;
-      margin-bottom: 1.75rem;
+    .faq-heading p {
+      color: #687377;
+      margin-bottom: 0;
     }
 
-    .form-field {
-      position: relative;
-      margin-bottom: 1.4rem;
+    .faq-wrap {
+      max-width: 850px;
+      margin: 0 auto;
     }
-    .form-field label {
-      display: block;
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      color: var(--brand-darker);
-      margin-bottom: .4rem;
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e3e7e8;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      box-shadow: 0 10px 28px rgba(0,0,0,.06);
     }
-    .form-field .field-icon-wrap {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-    .form-field .field-icon-wrap i {
-      position: absolute;
-      left: 1rem;
-      color: #9aa0a3;
-      font-size: .95rem;
-      pointer-events: none;
-    }
-    .form-field input,
-    .form-field select,
-    .form-field textarea {
+
+    .faq-question {
       width: 100%;
-      border: 1.5px solid #e3e7e8;
-      background: #f7fafb;
-      border-radius: .75rem;
-      padding: .8rem 1rem .8rem 2.6rem;
-      font-family: 'Manrope', sans-serif;
-      font-size: .98rem;
-      color: var(--ink);
-      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
-    }
-    .form-field textarea {
-      padding-left: 1rem;
-      min-height: 110px;
-      resize: vertical;
-    }
-    .form-field select {
-      appearance: none;
-      -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23009bb0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 1rem center;
-      background-size: 1rem;
-    }
-    .form-field input:focus,
-    .form-field select:focus,
-    .form-field textarea:focus {
-      outline: none;
-      border-color: var(--brand);
-      background: white;
-      box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.15);
-    }
-    .form-field input::placeholder,
-    .form-field textarea::placeholder {
-      color: #a6adb0;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0 1.25rem;
-    }
-    @media (max-width: 575px) {
-      .form-grid { grid-template-columns: 1fr; }
-    }
-
-    .form-submit-btn {
-      width: 100%;
-      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-darker) 100%);
-      color: white;
-      border: none;
+      border: 0;
+      background: transparent;
+      color: #263238;
       font-weight: 700;
-      letter-spacing: .03em;
-      font-size: 1rem;
-      border-radius: .85rem;
-      padding: 1rem;
-      box-shadow: 0 14px 28px rgba(0, 188, 212, 0.35);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .form-submit-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 34px rgba(0, 188, 212, 0.45);
-    }
-    .form-note {
+      text-align: left;
+      padding: 1.2rem 1.35rem;
       display: flex;
       align-items: center;
-      gap: .5rem;
-      color: #8a9194;
-      font-size: .82rem;
-      margin-top: 1rem;
+      justify-content: space-between;
+      gap: 1rem;
     }
-    
+
+    .faq-question:hover {
+      background: #f8fbfc;
+    }
+
+    .faq-question i {
+      color: rgba(0, 188, 212, 1);
+      transition: transform .2s ease;
+    }
+
+    .faq-question:not(.collapsed) i {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 1.35rem 1.25rem;
+      color: #6b7478;
+      line-height: 1.7;
+    }
 
   </style>
 </head>
 <body>
 
-  <a href="https://wa.me/27659938778?text=Hello%20I%20am%20interested%20in%20your%20products" target="_blank_" style="color: #25D366; font-size: 50px; bottom: 0; right: 0; position: fixed;">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <div class="bg-image min-vh-100" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('alpha-images/roof-camera.jpg');background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;">
-
-          <!--Navbar begin-->
-
-    <div class="navbar navbar-expanded-md navbar-dark bg-info">
-      <div class="container">
-        <a href="index.html" class="navbar-brand" style="text-decoration: none;">
-          <img src="alpha-images/logo.png" class="img-fluid" style="height: 8rem;">
-          <p class="bg-secondary mt-1">NOZULU PROJECTS</p>
-        </a>
-        <button class="navbar-toggler bg-secondary" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
-            <div class="navbar-toggler-icon"></div>
-        </button>
-        <div class="collapse navbar-collapse" id="nav">
-          <ul>
-            <div class="mb-1"><a href="index.html">Home</a></div>
-            <div class="mb-1"><a href="#services">Our Services</a></div>
-            <div class="mb-1"><a href="about-us.html">About us</a></div>
-            <div class="mb-1"><a href="contact-us.html">Contact us</a></div>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!--<div class="card">
-      <div class="card-body bg-info">
-        <img  class="bg-img img-fluid" src="alpha-images-logo.png" style="height: 8rem; ">
-        <p class="bg-info text-white" data-bs-toggle="modal" data-bs-target="#menu" >Menu</p>
-      </div>
-    </div>-->
-
-    <!--Modal begin-->
-
-    <!--<div class="modal" id="menu">
-      <div class="modal-dialog bg-secondary">
-        <div class="modal-body">
-          <div class="row ">
-            <div class="col-12 text-white display-3 mb-2">
-              Home
-            </div>
-             <div class="col-12 text-white display-3 mb-2">
-              Home
-            </div>
-             <div class="col-12 text-white display-3 mb-2">
-              Home
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>-->
-  
-    <div class="container">
-       <h2 class="text-white" style="font-size: 5rem;">Quality &<br>Trusted Work</h2>
-      <h3 class="display-3 mt-2 text-white" style="">Guaranteed work by skilled<br> professionals since 2017</h3>
-    </div>
-  </div>
-  
-
-  <!--<div class="background  " style="background-color: rgba(0, 188, 212, 1.0);">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-9 text-white ">
-          <h1 style="margin-top: 1.5rem;
-          background-color: grey;">NOZULU PROJECTS</h1>
-
-        </div>
-        <div class="col-12 col-md-3">
-          <img src="alpha-images/logo.png" class="img-fluid w-100" style="height: 10rem;">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-3 col-md-2 text-white" style="margin-top: 1.2rem; margin-left: 1rem;">
-          <a href="our-services.html">Our services</a>
-        </div>
-        <div class=" col-3 col-md-2 text-white" style="margin-top: 1.2rem;">
-          <a href="about-us.html">About us</a>
-        </div>
-        <div class="col-3 col-md-2 text-white" style="margin-top: 1.2rem;">
-          <a href="contact-us.html">Contact us</a>
-        </div>
-      </div>
-     </div>
-
-  </div>
-
-  <div class="background " style="height: 10px; background-color: rgba(55, 55, 55, 0.5);">
-  </div>
-
-  <div class="bg-image img-fluid   " style="min-height: 75vh; background-image: url('alpha-images/roof-camera.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;">
-      <h2 class="" style="font-size: 5rem; margin-left: 1rem;">Quality &<br>Trusted Work</h2>
-    <h3 class="display-3 mt-2" style=" margin-left: 1rem;">Guaranteed work by skilled<br> professionals since 2017</h3>
-  </div>-->
-
-    <div class="bg-image min-vh-100 " style="background-image: url('alpha-images/AnotherCamera.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;">
-  <h4 class="display-4" style="color: rgba(0, 188, 215, 1.0);
-    margin-left: 1.5rem;">Electrical and security installation specialists</h4>
-  <p class="lead" style="margin-left: 1.5rem;">Nozulu Projects prides itself in quality work, with skilled technicians at your service.<br> We specialise in everything electrical, and excel at security servalliance.<br>Bringing safety and assurrance to those seeking servaillance solutions.<br>We also have a good reputation for installing electrical gates<br>as well as solar systems for those seeking to have a sort of<br> independance from the main south african grid.</p>
-
-  
-    <div class="container">
-    <div class="row ">
-      <!-- I assume mx-auto means automatic margin on x-axis -->
-      <div class="col-11 col-md-4 mx-auto mb-3 bg-white" style=" border-radius: 1.5rem;
-      padding: 1rem; height: fit-content;">
-        <p>We offer maintanance to help keep operations and processes at optimal condition and reduce down time and consultancy.<br>
-        </p>
-
-        <a href="#quote-form">
-          <button id="request-button" class="w-100 "style="background-color: rgba(0, 188, 215, 1.0);
-        padding: 20px;
-        border-radius: 1.5rem;
-        ">REQUEST A QUOTE
-        </button>
-        </a>
-        
-        
-      </div>
-      <div class="col-12 col-md-6 mb-3">
-        <div class="container" style="">
-          <div class="wrapper">
-            <div class="wrapper-holder">
-              <div id="slider-img-1"></div>
-              <div id="slider-img-2"></div>
-              <div id="slider-img-3"></div>
-              <div id="slider-img-4"></div>
-              <div id="slider-img-5"></div>
-              <div id="slider-img-6"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-  </div>
-
-  
-
-    <div class="min-vh-100 " style="background-color:rgba(55, 55, 55, 0.8);">
-
-
-      <div class="d-flex justify-content-center align-items-center mb-5">
-        <h5 class="text text-white"style="font-size: 4rem;" id="services">Areas of Focus</h5>
-      </div>
-
-      <div class="container">
-      
-        <div class="row">
-          <div class="col-12 col-md-4">
-            
-            <div class="card card-img-top" data-bs-target="#surveillance" data-bs-toggle="modal"  >
-
-              <div class="card-body">
-                <h6 class="card-header bg-primary lead">Surveillance</h6>
-                <img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
-              </div>
-              
-              </div>
-            
-          </div>
-
-          <div class="col-12 col-md-4">
-            <div class="card card-img-top"  data-bs-target="#gate" data-bs-toggle="modal" >
-
-              <div class="card-body">
-                <h6 class="card-header bg-success lead">Gate Installation</h6>
-                <img src="alpha-images/kudas-gate.jpeg" class="card-img-top" >
-              </div>
-              </div>
-          </div>
-
-          <div class="col-12 col-md-4">
-            <div class="card card-img-top" data-bs-target="#solar" data-bs-toggle="modal" >
-              
-
-              <div class="card-body">
-                <h6 class="card-header bg-primary lead">Solar installation</h6>
-                <img src="alpha-images/solar-power-power-station1.webp" class="card-img-top" >
-                
-              </div>
-              </div>
-          </div>
-
-          <div class="col-12 col-md-4">
-            <div class="card card-img-top" data-bs-target="#aircon" data-bs-toggle="modal" >
-              
-              <!--
-            Below is a picture from Freepik
-            Author: lifeforstock
-            License:Free for commercial use with attribution
-            Link address: https://www.freepik.com/free-photo/air-conditioning-decoration-interior_4011406.htm#fromView=search&page=1&position=4&uuid=1f42ebd4-4b92-440d-98f9-6ada91e50837&query=aircon
-            www.freepik.com
-            -->
-
-              <div class="card-body">
-                <h6 class="card-header bg-primary lead">Aircon</h6>
-                <img src="alpha-images/freepik-aircon.webp" class="card-img-top" >
-                
-              </div>
-              </div>
-          </div>
-
-          <div class="col-12 col-md-4">
-            <div class="card card-img-top" data-bs-target="#intercom" data-bs-toggle="modal" >
-              
-              <!--
-        Below is a photo from Bernard Hermant thanks for the free pic
-        Photo by <a href="https://unsplash.com/@bernardhermant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bernard Hermant</a> on <a href="https://unsplash.com/photos/gray-alarm-system-on-yellow-wall-A9wbeTxMBeU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-      
-        -->
-
-              <div class="card-body">
-                <h6 class="card-header bg-warning lead">Intercom</h6>
-                <img src="alpha-images/Bernerd-intercom.webp" class="card-img-top" >
-                
-              </div>
-              </div>
-          </div>
-
-           <div class="col-12 col-md-4">
-            <div class="card card-img-top" data-bs-target="#pool" data-bs-toggle="modal" >
-              
-              <!--
-            Below is a picture from Freepik
-            Author: SIRAPHOL S.
-            License:Free for commercial use with attribution
-            Link address: https://www.freepik.com/free-photo/umbrella-chair_3661169.htm#fromView=keyword&page=1&position=1&uuid=642ae942-8d7a-4425-80a6-c3a71e438a1b&query=Pool
-            www.freepik.com
-            -->
-
-              <div class="card-body">
-                <h6 class="card-header bg-primary lead">Pools</h6>
-                <img src="alpha-images/umbrella-chair.webp" class="card-img-top" >
-                
-              </div>
-              </div>
-          </div>
-        </div>
-
-      </div>
-
-      
-            <!--<div class="container">
-          <div class="row flex-column justify-content-center align-items-center ">
-            <div class="col-6 mb-5 bg-info rounded-5">
-              <button class="btn text-grey " data-bs-toggle="modal" data-bs-target="" style="font-size: 3rem;">Surveillance</button>
-            </div>
-
-            <div class="col-6 mb-5 bg-secondary rounded-5 ">
-              <button class="btn text-info px-6" data-bs-toggle="modal" data-bs-target="#gate" style="font-size: 3rem;">Gate</button>
-            </div>
-
-            <div class="col-6 mb-5 bg-info rounded-5">
-              <button class="btn text-grey px-5" data-bs-toggle="modal" data-bs-target="#solar" style="font-size: 3rem;">Solar</button>
-            </div>
-
-            <div class="col-6 mb-5 bg-secondary rounded-5">
-              <button class="btn text-info" data-bs-toggle="modal" data-bs-target="#intercom" style="font-size: 3rem;">Intercom</button>
-            </div>
-
-            <div class="col-6 mb-5 bg-info rounded-5">
-              <button class="btn text-grey" data-bs-toggle="modal" data-bs-target="#aircon" style="font-size: 3rem;">Aircon</button>
-            </div>
-          </div>
-          </div>-->
-
-        <div class="modal" id="surveillance">
-          <div class="modal-dialog bg-white">
-            <div class="modal-header">
-              <h1 class="modal-title">Surveillance</h1>
-              <button class="btn btn-close" dismiss="modal"></button>
-            </div>
-
-            <div class="modal-body">
-              <image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
-              <p>Enhance your property’s security with our high-definition surveillance solutions. We specialize in the installation of smart IP cameras, remote mobile monitoring, and advanced motion detection systems. Whether for your home or business, we provide 24/7 visibility and secure digital recording to ensure you always have peace of mind.</p>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" id="gate">
-          <div class="modal-dialog bg-white">
-            <div class="modal-header">
-              <h1 class="modal-title">Gate</h1>
-              <button class="btn btn-close" dismiss="modal"></button>
-            </div>
-
-            <div class="modal-body">
-              <image src="alpha-images/kudas-gate.jpeg" style="height: 7rem; width: 7rem;">
-              <p>Secure your perimeter with our professional gate automation and repair services. we handle everything from sliding gate motors to swing gate actuators, ensuring smooth and reliable access control. Our team focuses on safety features, battery backups, and durable hardware to keep your entrance functioning perfectly in any weather condition.</p>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="modal" id="solar">
-          <div class="modal-dialog bg-white">
-            <div class="modal-header">
-              <h1 class="modal-title">Solar</h1>
-              <button class="btn btn-close" dismiss="modal"></button>
-            </div>
-
-            <!--
-            Below is a picture from Freepik
-            License:Free for commercial use with attribution
-            www.freepik.com
-            -->
-
-            <div class="modal-body">
-              <image src="alpha-images/solar-power-power-station1.webp" style="height: 7rem; width: 7rem;">
-              <p>Switch to sustainable power with our comprehensive solar energy installations. We offer custom-designed photovoltaic systems, including high-efficiency panels, lithium-ion battery storage, and hybrid inverters. Reduce your monthly electricity costs and protect your home from power outages with our clean, reliable, and expertly maintained renewable energy solutions.</p>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-
-        </div>
-
-        <!--
-        Below is a photo from Bernard Hermant thanks for the free pic
-        Photo by <a href="https://unsplash.com/@bernardhermant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bernard Hermant</a> on <a href="https://unsplash.com/photos/gray-alarm-system-on-yellow-wall-A9wbeTxMBeU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-      
-        -->
-
-        <div class="modal" id="intercom">
-          <div class="modal-dialog bg-white">
-            <div class="modal-header">
-              <h1 class="modal-title">Intercom</h1>
-              <button class="btn btn-close" dismiss="modal"></button>
-            </div>
-
-            <div class="modal-body">
-              <image src="alpha-images/Bernerd-intercom.webp" style="height: 7rem; width: 7rem;">
-              <p>Improve your site communication with our modern intercom and access control systems. From basic audio handsets to advanced video door stations with smartphone integration, we provide clear and secure ways to screen visitors. We install, repair, and upgrade all major brands to ensure your property remains both accessible and protected.</p>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-
-        </div>
-
-        <!--
-            Below is a picture from Freepik
-            Author: lifeforstock
-            License:Free for commercial use with attribution
-            Link address: https://www.freepik.com/free-photo/air-conditioning-decoration-interior_4011406.htm#fromView=search&page=1&position=4&uuid=1f42ebd4-4b92-440d-98f9-6ada91e50837&query=aircon
-            www.freepik.com
-            -->
-
-        <div class="modal" id="aircon">
-          <div class="modal-dialog bg-white">
-            <div class="modal-header">
-              <h1 class="modal-title">Aircon</h1>
-              <button class="btn btn-close" dismiss="modal"></button>
-            </div>
-
-            <div class="modal-body">
-              <image src="alpha-images/freepik-aircon.webp" style="height: 5rem; width: 5rem;">
-              <p>Stay comfortable year-round with our expert air conditioning services. We specialize in the installation and repair of split units, cassettes, and ducted systems. We offer emergency gas refills, deep cleaning, and routine maintenance for all major brands, using only genuine parts to ensure maximum cooling efficiency and long-term reliability.</p>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-
-        </div>
-
-         <div class="modal" id="pool">
-          <div class="modal-dialog bg-white">
-            <div class="modal-header">
-              <h1 class="modal-title">Pools</h1>
-              <button class="btn btn-close" dismiss="modal"></button>
-            </div>
-
-            <!--
-            Below is a picture from Freepik
-            Author: SIRAPHOL S.
-            License:Free for commercial use with attribution
-            Link address: https://www.freepik.com/free-photo/umbrella-chair_3661169.htm#fromView=keyword&page=1&position=1&uuid=642ae942-8d7a-4425-80a6-c3a71e438a1b&query=Pool
-            www.freepik.com
-            -->
-
-            <div class="modal-body">
-              <image src="alpha-images/umbrella-chair.webp" style="height: 7rem; width: 7rem;">
-              <p>Keep your swimming pool crystal clear with our professional maintenance and repair solutions. We handle pump installations, sand filter changes, salt chlorinator repairs, and leak detection. Our team ensures your water chemistry is perfectly balanced and your equipment is running efficiently, allowing you to enjoy a pristine pool without the hassle.</p>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!--SUBMISSION FORM-->
-
-    <div class="quote-section">
-      <section id="quote-form">
-        <div class="container">
-          <div class="row align-items-center g-5">
-
-            <div class="col-12 col-lg-5 quote-info">
-              <div class="hero-eyebrow">Free, no-obligation quote</div>
-              <h3>Tell us what you need &mdash; we'll take it from there</h3>
-              <p>Fill in a few details about your project and one of our technicians will get back to you to confirm timing and pricing.</p>
-              <ul class="quote-perks">
-                <li><i class="fas fa-bolt"></i> Fast response, usually same day</li>
-                <li><i class="fas fa-user-check"></i> Skilled, experienced technicians</li>
-                <li><i class="fas fa-shield-halved"></i> Quality work guaranteed</li>
-              </ul>
-            </div>
-
-            <div class="col-12 col-lg-7">
-              <div class="form-card">
-                <h4>Request a quote</h4>
-                <p class="form-subtext">Tell us a bit about the job and we'll get back to you shortly.</p>
-
-                <form name="quote-request" method="POST" data-netlify="true">
-                  <input type="hidden" name="form-name" value="quote-request">
-
-                  <div class="form-grid">
-                    <div class="form-field">
-                      <label for="name">Name</label>
-                      <div class="field-icon-wrap">
-                        <i class="fas fa-user"></i>
-                        <input id="name" type="text" name="name" placeholder="Your full name" required>
-                      </div>
-                    </div>
-
-                    <div class="form-field">
-                      <label for="phone">Phone</label>
-                      <div class="field-icon-wrap">
-                        <i class="fas fa-phone"></i>
-                        <input id="phone" type="tel" name="phone" placeholder="Your phone number" required>
-                      </div>
-                    </div>
-
-                    <div class="form-field">
-                      <label for="email">Email</label>
-                      <div class="field-icon-wrap">
-                        <i class="fas fa-envelope"></i>
-                        <input id="email" type="email" name="email" placeholder="you@example.com" required>
-                      </div>
-                    </div>
-
-                    <div class="form-field">
-                      <label for="service">Service</label>
-                      <div class="field-icon-wrap">
-                        <select id="service" name="service">
-                          <option>Solar</option>
-                          <option>Surveillance</option>
-                          <option>Aircon</option>
-                          <option>Gate</option>
-                          <option>Intercom</option>
-                          <option>Pool</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-field">
-                    <label for="details">Additional info</label>
-                    <div class="field-icon-wrap">
-                      <textarea id="details" name="details" placeholder="Tell us a little more about the job&hellip;"></textarea>
-                    </div>
-                  </div>
-
-                  <button type="submit" class="form-submit-btn">Submit request <i class="fas fa-paper-plane ms-2"></i></button>
-
-                  <div class="form-note"><i class="fas fa-lock"></i> Your details are only used to prepare your quote.</div>
-                </form>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!--END OF PAGE-->
-
-    <div class="min-vh-80 " style="background-color:rgba(0, 188, 212, 1.0);">
-      <div class="container">
-        <div class="row">
-          <div class="col p-2">
-            <img src="alpha-images/logo.png" style="height:100px; float: left; margin-left: 1rem;">
-            <p class="text" style="color: rgba(55, 55, 55, 1.0);">
-              We specialise in surveillance<br>and everything electrical,<br> bringing quality work to our customers.
-            </p>
-          </div>
-          
-        </div>
-        </div>
-    <p class="text-white" style="margin-left: 1rem">
-      <br>
-      <br>
-      <b>Business hours</b><br>
-      Weekdays:  7:00 - 18:00<br>
-      Saturdays: 8:00 - 13:00<br>
-      Sundays & Public holidays: Closed<br>
-      <br>
-
-      <b>Quick Links</b><br>
-      <a href="index.html">Home</a><br>
-      <a href="#services">Our Services</a><br>
-      <a href="about-us.html">About us</a><br>
-      <br>
-
-
-      <b>Contact Us</b><br>
-      <i class="fas fa-phone"></i>073 881 3572<br>
-      <i class="fab fa-whatsapp"></i>073 769 7361<br>
-      <i class="fas fa-envelope"></i>mncekz@gmail.com<br>
-      <br>
-
-
-      <b>Location</b><br>
-      <i class="fas fa-location"></i>57 Devon Rd Lansdowne Yorkshire Estate Capetown 7780
-      <br>
-      <br>
-
-    </p>
-
-    <footer class="background  " style="background-color: rgba(0, 188, 212, 1.0);">
-  
-    Copyright &copy; 2025 NOZULU PROJECTS. All Rights Reserved
-  
-        </footer>
-  </div>
+<a href="https://wa.me/27659938778?text=Hello%20I%20am%20interested%20in%20your%20products" target="_blank_" style="color: #25D366; font-size: 50px; bottom: 0; right: 0; position: fixed;">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<div class="bg-image min-vh-100" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('alpha-images/roof-camera.jpg');background-repeat: no-repeat;
+background-size: cover;
+background-position: center;">
+
+<!--Navbar begin-->
+
+<div class="navbar navbar-expanded-md navbar-dark bg-info">
+<div class="container">
+<a href="index.html" class="navbar-brand" style="text-decoration: none;">
+<img src="alpha-images/logo.png" class="img-fluid" style="height: 8rem;">
+<p class="bg-secondary mt-1">NOZULU PROJECTS</p>
+</a>
+<button class="navbar-toggler bg-secondary" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
+<div class="navbar-toggler-icon"></div>
+</button>
+<div class="collapse navbar-collapse" id="nav">
+<ul>
+<div class="mb-1"><a href="index.html">Home</a></div>
+<div class="mb-1"><a href="#services">Our Services</a></div>
+<div class="mb-1"><a href="about-us.html">About us</a></div>
+<div class="mb-1"><a href="contact-us.html">Contact us</a></div>
+</ul>
+</div>
+</div>
+</div>
+
+<!--<div class="card">
+<div class="card-body bg-info">
+<img  class="bg-img img-fluid" src="alpha-images-logo.png" style="height: 8rem; ">
+<p class="bg-info text-white" data-bs-toggle="modal" data-bs-target="#menu" >Menu</p>
+</div>
+</div>-->
+
+<!--Modal begin-->
+
+<!--<div class="modal" id="menu">
+<div class="modal-dialog bg-secondary">
+<div class="modal-body">
+<div class="row ">
+<div class="col-12 text-white display-3 mb-2">
+Home
+</div>
+<div class="col-12 text-white display-3 mb-2">
+Home
+</div>
+<div class="col-12 text-white display-3 mb-2">
+Home
+</div>
+</div>
+</div>
+</div>
+</div>-->
+<div class="container">
+<h2 class="text-white" style="font-size: 5rem;">Quality &Trusted Work</h2>
+<h3 class="display-3 mt-2 text-white" style="">Guaranteed work by skilled professionals since 2017</h3>
+</div>
+</div>
+
+<!--<div class="background  " style="background-color: rgba(0, 188, 212, 1.0);">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-12 col-md-9 text-white ">
+<h1 style="margin-top: 1.5rem;
+background-color: grey;">NOZULU PROJECTS</h1>
+
+</div>
+<div class="col-12 col-md-3">
+<img src="alpha-images/logo.png" class="img-fluid w-100" style="height: 10rem;">
+</div>
+</div>
+
+<div class="row">
+<div class="col-3 col-md-2 text-white" style="margin-top: 1.2rem; margin-left: 1rem;">
+<a href="our-services.html">Our services</a>
+</div>
+<div class=" col-3 col-md-2 text-white" style="margin-top: 1.2rem;">
+<a href="about-us.html">About us</a>
+</div>
+<div class="col-3 col-md-2 text-white" style="margin-top: 1.2rem;">
+<a href="contact-us.html">Contact us</a>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="background " style="height: 10px; background-color: rgba(55, 55, 55, 0.5);">
+</div>
+
+<div class="bg-image img-fluid   " style="min-height: 75vh; background-image: url('alpha-images/roof-camera.jpg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;">
+<h2 class="" style="font-size: 5rem; margin-left: 1rem;">Quality &Trusted Work</h2>
+<h3 class="display-3 mt-2" style=" margin-left: 1rem;">Guaranteed work by skilled professionals since 2017</h3>
+</div>-->
+
+<div class="bg-image min-vh-100 " style="background-image: url('alpha-images/AnotherCamera.jpeg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;">
+<h4 class="display-4" style="color: rgba(0, 188, 215, 1.0);
+margin-left: 1.5rem;">Electrical and security installation specialists</h4>
+<p class="lead" style="margin-left: 1.5rem;">Nozulu Projects prides itself in quality work, with skilled technicians at your service. We specialise in everything electrical, and excel at security servalliance.Bringing safety and assurrance to those seeking servaillance solutions.We also have a good reputation for installing electrical gatesas well as solar systems for those seeking to have a sort of independance from the main south african grid.</p>
+
+<div class="container">
+<div class="row ">
+<!-- I assume mx-auto means automatic margin on x-axis -->
+<div class="col-11 col-md-4 mx-auto mb-3 bg-white" style=" border-radius: 1.5rem;
+padding: 1rem; height: fit-content;">
+<p>We offer maintanance to help keep operations and processes at optimal condition and reduce down time and consultancy.
+</p>
+
+<a href="#quote-form">
+<button id="request-button" class="w-100 "style="background-color: rgba(0, 188, 215, 1.0);
+padding: 20px;
+border-radius: 1.5rem;
+">REQUEST A QUOTE
+</button>
+</a>
+</div>
+<div class="col-12 col-md-6 mb-3">
+<div class="container" style="">
+<div class="wrapper">
+<div class="wrapper-holder">
+<div id="slider-img-1"></div>
+<div id="slider-img-2"></div>
+<div id="slider-img-3"></div>
+<div id="slider-img-4"></div>
+<div id="slider-img-5"></div>
+<div id="slider-img-6"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="min-vh-100 " style="background-color:rgba(55, 55, 55, 0.8);">
+
+
+<div class="d-flex justify-content-center align-items-center mb-5">
+<h5 class="text text-white"style="font-size: 4rem;" id="services">Areas of Focus</h5>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-12 col-md-4">
+<div class="card card-img-top" data-bs-target="#surveillance" data-bs-toggle="modal"  >
+
+<div class="card-body">
+<h6 class="card-header bg-primary lead">Surveillance</h6>
+<img src="alpha-images/camera-popup-pic.avif" class="card-img-top" >
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4">
+<div class="card card-img-top"  data-bs-target="#gate" data-bs-toggle="modal" >
+
+<div class="card-body">
+<h6 class="card-header bg-success lead">Gate Installation</h6>
+<img src="alpha-images/kudas-gate.jpeg" class="card-img-top" >
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4">
+<div class="card card-img-top" data-bs-target="#solar" data-bs-toggle="modal" >
+
+<div class="card-body">
+<h6 class="card-header bg-primary lead">Solar installation</h6>
+<img src="alpha-images/solar-power-power-station1.webp" class="card-img-top" >
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4">
+<div class="card card-img-top" data-bs-target="#aircon" data-bs-toggle="modal" >
+<!--
+Below is a picture from Freepik
+Author: lifeforstock
+License:Free for commercial use with attribution
+Link address: https://www\.freepik.com/free-photo/air-conditioning-decoration-interior_4011406.htm#fromView=search&page=1&position=4&uuid=1f42ebd4-4b92-440d-98f9-6ada91e50837&query=aircon
+www\.freepik.com
+-->
+
+<div class="card-body">
+<h6 class="card-header bg-primary lead">Aircon</h6>
+<img src="alpha-images/freepik-aircon.webp" class="card-img-top" >
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4">
+<div class="card card-img-top" data-bs-target="#intercom" data-bs-toggle="modal" >
+<!--
+Below is a photo from Bernard Hermant thanks for the free pic
+Photo by <a href="https://unsplash.com/@bernardhermant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bernard Hermant</a> on <a href="https://unsplash.com/photos/gray-alarm-system-on-yellow-wall-A9wbeTxMBeU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+<div class="card-body">
+<h6 class="card-header bg-warning lead">Intercom</h6>
+<img src="alpha-images/Bernerd-intercom.webp" class="card-img-top" >
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4">
+<div class="card card-img-top" data-bs-target="#pool" data-bs-toggle="modal" >
+<!--
+Below is a picture from Freepik
+Author: SIRAPHOL S.
+License:Free for commercial use with attribution
+Link address: https://www\.freepik.com/free-photo/umbrella-chair_3661169.htm#fromView=keyword&page=1&position=1&uuid=642ae942-8d7a-4425-80a6-c3a71e438a1b&query=Pool
+www\.freepik.com
+-->
+
+<div class="card-body">
+<h6 class="card-header bg-primary lead">Pools</h6>
+<img src="alpha-images/umbrella-chair.webp" class="card-img-top" >
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--<div class="container">
+<div class="row flex-column justify-content-center align-items-center ">
+<div class="col-6 mb-5 bg-info rounded-5">
+<button class="btn text-grey " data-bs-toggle="modal" data-bs-target="" style="font-size: 3rem;">Surveillance</button>
+</div>
+
+<div class="col-6 mb-5 bg-secondary rounded-5 ">
+<button class="btn text-info px-6" data-bs-toggle="modal" data-bs-target="#gate" style="font-size: 3rem;">Gate</button>
+</div>
+
+<div class="col-6 mb-5 bg-info rounded-5">
+<button class="btn text-grey px-5" data-bs-toggle="modal" data-bs-target="#solar" style="font-size: 3rem;">Solar</button>
+</div>
+
+<div class="col-6 mb-5 bg-secondary rounded-5">
+<button class="btn text-info" data-bs-toggle="modal" data-bs-target="#intercom" style="font-size: 3rem;">Intercom</button>
+</div>
+
+<div class="col-6 mb-5 bg-info rounded-5">
+<button class="btn text-grey" data-bs-toggle="modal" data-bs-target="#aircon" style="font-size: 3rem;">Aircon</button>
+</div>
+</div>
+</div>-->
+
+<div class="modal" id="surveillance">
+<div class="modal-dialog bg-white">
+<div class="modal-header">
+<h1 class="modal-title">Surveillance</h1>
+<button class="btn btn-close" dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<image src="alpha-images/kudas-camera.jpeg" style="height: 7rem; width: 7rem;">
+<p>Enhance your property’s security with our high-definition surveillance solutions. We specialize in the installation of smart IP cameras, remote mobile monitoring, and advanced motion detection systems. Whether for your home or business, we provide 24/7 visibility and secure digital recording to ensure you always have peace of mind.</p>
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+
+<div class="modal" id="gate">
+<div class="modal-dialog bg-white">
+<div class="modal-header">
+<h1 class="modal-title">Gate</h1>
+<button class="btn btn-close" dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<image src="alpha-images/kudas-gate.jpeg" style="height: 7rem; width: 7rem;">
+<p>Secure your perimeter with our professional gate automation and repair services. we handle everything from sliding gate motors to swing gate actuators, ensuring smooth and reliable access control. Our team focuses on safety features, battery backups, and durable hardware to keep your entrance functioning perfectly in any weather condition.</p>
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+
+</div>
+
+<div class="modal" id="solar">
+<div class="modal-dialog bg-white">
+<div class="modal-header">
+<h1 class="modal-title">Solar</h1>
+<button class="btn btn-close" dismiss="modal"></button>
+</div>
+
+<!--
+Below is a picture from Freepik
+License:Free for commercial use with attribution
+www\.freepik.com
+-->
+
+<div class="modal-body">
+<image src="alpha-images/solar-power-power-station1.webp" style="height: 7rem; width: 7rem;">
+<p>Switch to sustainable power with our comprehensive solar energy installations. We offer custom-designed photovoltaic systems, including high-efficiency panels, lithium-ion battery storage, and hybrid inverters. Reduce your monthly electricity costs and protect your home from power outages with our clean, reliable, and expertly maintained renewable energy solutions.</p>
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+
+</div>
+
+<!--
+Below is a photo from Bernard Hermant thanks for the free pic
+Photo by <a href="https://unsplash.com/@bernardhermant?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bernard Hermant</a> on <a href="https://unsplash.com/photos/gray-alarm-system-on-yellow-wall-A9wbeTxMBeU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+<div class="modal" id="intercom">
+<div class="modal-dialog bg-white">
+<div class="modal-header">
+<h1 class="modal-title">Intercom</h1>
+<button class="btn btn-close" dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<image src="alpha-images/Bernerd-intercom.webp" style="height: 7rem; width: 7rem;">
+<p>Improve your site communication with our modern intercom and access control systems. From basic audio handsets to advanced video door stations with smartphone integration, we provide clear and secure ways to screen visitors. We install, repair, and upgrade all major brands to ensure your property remains both accessible and protected.</p>
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+
+</div>
+
+<!--
+Below is a picture from Freepik
+Author: lifeforstock
+License:Free for commercial use with attribution
+Link address: https://www\.freepik.com/free-photo/air-conditioning-decoration-interior_4011406.htm#fromView=search&page=1&position=4&uuid=1f42ebd4-4b92-440d-98f9-6ada91e50837&query=aircon
+www\.freepik.com
+-->
+
+<div class="modal" id="aircon">
+<div class="modal-dialog bg-white">
+<div class="modal-header">
+<h1 class="modal-title">Aircon</h1>
+<button class="btn btn-close" dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<image src="alpha-images/freepik-aircon.webp" style="height: 5rem; width: 5rem;">
+<p>Stay comfortable year-round with our expert air conditioning services. We specialize in the installation and repair of split units, cassettes, and ducted systems. We offer emergency gas refills, deep cleaning, and routine maintenance for all major brands, using only genuine parts to ensure maximum cooling efficiency and long-term reliability.</p>
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+
+</div>
+
+<div class="modal" id="pool">
+<div class="modal-dialog bg-white">
+<div class="modal-header">
+<h1 class="modal-title">Pools</h1>
+<button class="btn btn-close" dismiss="modal"></button>
+</div>
+
+<!--
+Below is a picture from Freepik
+Author: SIRAPHOL S.
+License:Free for commercial use with attribution
+Link address: https://www\.freepik.com/free-photo/umbrella-chair_3661169.htm#fromView=keyword&page=1&position=1&uuid=642ae942-8d7a-4425-80a6-c3a71e438a1b&query=Pool
+www\.freepik.com
+-->
+
+<div class="modal-body">
+<image src="alpha-images/umbrella-chair.webp" style="height: 7rem; width: 7rem;">
+<p>Keep your swimming pool crystal clear with our professional maintenance and repair solutions. We handle pump installations, sand filter changes, salt chlorinator repairs, and leak detection. Our team ensures your water chemistry is perfectly balanced and your equipment is running efficiently, allowing you to enjoy a pristine pool without the hassle.</p>
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!--SUBMISSION FORM-->
+
+<div class="quote-section">
+<section id="quote-form">
+<div class="container">
+<div class="row align-items-center g-5">
+
+<div class="col-12 col-lg-5 quote-info">
+<div class="hero-eyebrow">Free, no-obligation quote</div>
+<h3>Tell us what you need &mdash; we'll take it from there</h3>
+<p>Fill in a few details about your project and one of our technicians will get back to you to confirm timing and pricing.</p>
+<ul class="quote-perks">
+<li><i class="fas fa-bolt"></i> Fast response, usually same day</li>
+<li><i class="fas fa-user-check"></i> Skilled, experienced technicians</li>
+<li><i class="fas fa-shield-halved"></i> Quality work guaranteed</li>
+</ul>
+</div>
+
+<div class="col-12 col-lg-7">
+<div class="form-card">
+<h4>Request a quote</h4>
+<p class="form-subtext">Tell us a bit about the job and we'll get back to you shortly.</p>
+
+<form name="quote-request" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="quote-request">
+
+<div class="form-grid">
+<div class="form-field">
+<label for="name">Name</label>
+<div class="field-icon-wrap">
+<i class="fas fa-user"></i>
+<input id="name" type="text" name="name" placeholder="Your full name" required>
+</div>
+</div>
+
+<div class="form-field">
+<label for="phone">Phone</label>
+<div class="field-icon-wrap">
+<i class="fas fa-phone"></i>
+<input id="phone" type="tel" name="phone" placeholder="Your phone number" required>
+</div>
+</div>
+
+<div class="form-field">
+<label for="email">Email</label>
+<div class="field-icon-wrap">
+<i class="fas fa-envelope"></i>
+<input id="email" type="email" name="email" placeholder="you@example.com" required>
+</div>
+</div>
+
+<div class="form-field">
+<label for="service">Service</label>
+<div class="field-icon-wrap">
+<select id="service" name="service">
+<option>Solar</option>
+<option>Surveillance</option>
+<option>Aircon</option>
+<option>Gate</option>
+<option>Intercom</option>
+<option>Pool</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class="form-field">
+<label for="details">Additional info</label>
+<div class="field-icon-wrap">
+<textarea id="details" name="details" placeholder="Tell us a little more about the job&hellip;"></textarea>
+</div>
+</div>
+
+<button type="submit" class="form-submit-btn">Submit request <i class="fas fa-paper-plane ms-2"></i></button>
+
+<div class="form-note"><i class="fas fa-lock"></i> Your details are only used to prepare your quote.</div>
+</form>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+</div>
+
+<!--END OF PAGE-->
+
+<div class="min-vh-80 " style="background-color:rgba(0, 188, 212, 1.0);">
+<div class="container">
+<div class="row">
+<div class="col p-2">
+<img src="alpha-images/logo.png" style="height:100px; float: left; margin-left: 1rem;">
+<p class="text" style="color: rgba(55, 55, 55, 1.0);">
+We specialise in surveillanceand everything electrical, bringing quality work to our customers.
+</p>
+</div>
+</div>
+</div>
+<p class="text-white" style="margin-left: 1rem">
+
+
+<b>Business hours</b>
+Weekdays:  7:00 - 18:00
+Saturdays: 8:00 - 13:00
+Sundays & Public holidays: Closed
+
+
+<b>Quick Links</b>
+<a href="index.html">Home</a>
+<a href="#services">Our Services</a>
+<a href="about-us.html">About us</a>
+
+
+
+<b>Contact Us</b>
+<i class="fas fa-phone"></i>073 881 3572
+<i class="fab fa-whatsapp"></i>073 769 7361
+<i class="fas fa-envelope"></i>mncekz@gmail.com
+
+
+
+<b>Location</b>
+<i class="fas fa-location"></i>57 Devon Rd Lansdowne Yorkshire Estate Capetown 7780
+
+
+
+</p>
+
+<footer class="background  " style="background-color: rgba(0, 188, 212, 1.0);">
+Copyright &copy; 2025 NOZULU PROJECTS. All Rights Reserved
+</footer>
+</div>
 
 
 
 
 </body>
-</html> 
+</html>
