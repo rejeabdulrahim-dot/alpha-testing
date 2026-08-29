@@ -343,75 +343,108 @@ margin-top: 1rem;
 }
 
 
+    /* Quote section */
+    .quote-section {
+      background: linear-gradient(135deg, #007f91, #00bcd4);
+      padding: 4rem 0;
+    }
+
+    .quote-intro {
+      color: white;
+      padding-right: 1.5rem;
+    }
+
+    .quote-intro h2 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .quote-intro p {
+      color: rgba(255,255,255,0.92);
+      max-width: 520px;
+    }
+
+    .quote-benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .quote-benefit i {
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.16);
+    }
+
+    .quote-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 1.75rem;
+      box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.18);
+    }
+
+    .quote-card .form-control,
+    .quote-card .form-select {
+      border-radius: 1rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .quote-card textarea.form-control {
+      min-height: 95px;
+      resize: vertical;
+    }
+
+    .quote-submit {
+      border-radius: 1rem;
+      padding: 0.85rem 1rem;
+      font-weight: 600;
+    }
+
     /* FAQ section */
     .faq-section {
-      padding: 4.5rem 0;
-      background: #f5f7f8;
+      background: #f6f8f9;
+      padding: 4rem 0;
     }
 
-    .faq-heading {
-      max-width: 720px;
-      margin: 0 auto 2rem;
-      text-align: center;
-    }
-
-    .faq-heading h3 {
-      font-family: 'Sora', sans-serif;
-      font-weight: 800;
-      color: #263238;
-      margin-bottom: .65rem;
-    }
-
-    .faq-heading p {
-      color: #687377;
-      margin-bottom: 0;
-    }
-
-    .faq-wrap {
+    .faq-section .accordion {
       max-width: 850px;
       margin: 0 auto;
     }
 
-    .faq-item {
-      background: #fff;
-      border: 1px solid #e3e7e8;
-      border-radius: 1.25rem;
+    .faq-section .accordion-item {
+      border: 0;
+      border-radius: 1.25rem !important;
       overflow: hidden;
       margin-bottom: 1rem;
-      box-shadow: 0 10px 28px rgba(0,0,0,.06);
+      box-shadow: 0 0.4rem 1.25rem rgba(0,0,0,0.06);
     }
 
-    .faq-question {
-      width: 100%;
-      border: 0;
-      background: transparent;
-      color: #263238;
-      font-weight: 700;
-      text-align: left;
+    .faq-section .accordion-button {
+      font-weight: 600;
       padding: 1.2rem 1.35rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
     }
 
-    .faq-question:hover {
-      background: #f8fbfc;
+    .faq-section .accordion-button:not(.collapsed) {
+      color: #006f7f;
+      background: #eefbfc;
+      box-shadow: none;
     }
 
-    .faq-question i {
-      color: rgba(0, 188, 212, 1);
-      transition: transform .2s ease;
+    .faq-section .accordion-button:focus {
+      box-shadow: none;
     }
 
-    .faq-question:not(.collapsed) i {
-      transform: rotate(180deg);
-    }
-
-    .faq-answer {
-      padding: 0 1.35rem 1.25rem;
-      color: #6b7478;
-      line-height: 1.7;
+    @media (max-width: 991.98px) {
+      .quote-intro {
+        padding-right: 0;
+        margin-bottom: 2rem;
+      }
     }
 
   </style>
@@ -820,93 +853,285 @@ www\.freepik.com
 
 </div>
 
-<!--SUBMISSION FORM-->
 
-<div class="quote-section">
-<section id="quote-form">
-<div class="container">
-<div class="row align-items-center g-5">
+    <!-- SUBMISSION FORM -->
+    <section class="quote-section" id="quote-form">
+      <div class="container">
+        <div class="row align-items-center g-4">
 
-<div class="col-12 col-lg-5 quote-info">
-<div class="hero-eyebrow">Free, no-obligation quote</div>
-<h3>Tell us what you need &mdash; we'll take it from there</h3>
-<p>Fill in a few details about your project and one of our technicians will get back to you to confirm timing and pricing.</p>
-<ul class="quote-perks">
-<li><i class="fas fa-bolt"></i> Fast response, usually same day</li>
-<li><i class="fas fa-user-check"></i> Skilled, experienced technicians</li>
-<li><i class="fas fa-shield-halved"></i> Quality work guaranteed</li>
-</ul>
-</div>
+          <div class="col-12 col-lg-5">
+            <div class="quote-intro">
+              <p class="text-uppercase fw-bold small mb-2">
+                Free, no-obligation quote
+              </p>
 
-<div class="col-12 col-lg-7">
-<div class="form-card">
-<h4>Request a quote</h4>
-<p class="form-subtext">Tell us a bit about the job and we'll get back to you shortly.</p>
+              <h2 class="mb-3">
+                Want to find out more from us?
+              </h2>
 
-<form name="quote-request" method="POST" data-netlify="true">
-<input type="hidden" name="form-name" value="quote-request">
+              <p class="mb-4">
+                Feel free to request a quote. It helps us understand exactly what
+                you need, recommend the right solution and give you a clearer idea
+                of pricing before any work begins. Requesting a quote is completely
+                free of charge and does not commit you to anything.
+              </p>
 
-<div class="form-grid">
-<div class="form-field">
-<label for="name">Name</label>
-<div class="field-icon-wrap">
-<i class="fas fa-user"></i>
-<input id="name" type="text" name="name" placeholder="Your full name" required>
-</div>
-</div>
+              <div class="quote-benefit">
+                <i class="fas fa-comments"></i>
+                <div>
+                  <strong>Tell us what you need</strong>
+                  <div class="small">
+                    Give us a quick overview of your project or problem.
+                  </div>
+                </div>
+              </div>
 
-<div class="form-field">
-<label for="phone">Phone</label>
-<div class="field-icon-wrap">
-<i class="fas fa-phone"></i>
-<input id="phone" type="tel" name="phone" placeholder="Your phone number" required>
-</div>
-</div>
+              <div class="quote-benefit">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <div>
+                  <strong>Get clearer pricing</strong>
+                  <div class="small">
+                    We can better estimate the work, materials and expected cost.
+                  </div>
+                </div>
+              </div>
 
-<div class="form-field">
-<label for="email">Email</label>
-<div class="field-icon-wrap">
-<i class="fas fa-envelope"></i>
-<input id="email" type="email" name="email" placeholder="you@example.com" required>
-</div>
-</div>
+              <div class="quote-benefit mb-0">
+                <i class="fas fa-circle-check"></i>
+                <div>
+                  <strong>Free and without obligation</strong>
+                  <div class="small">
+                    You can enquire before deciding whether you want to proceed.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<div class="form-field">
-<label for="service">Service</label>
-<div class="field-icon-wrap">
-<select id="service" name="service">
-<option>Solar</option>
-<option>Surveillance</option>
-<option>Aircon</option>
-<option>Gate</option>
-<option>Intercom</option>
-<option>Pool</option>
-<option>Other</option>
-</select>
-</div>
-</div>
-</div>
+          <div class="col-12 col-lg-7">
+            <div class="quote-card">
 
-<div class="form-field">
-<label for="details">Additional info</label>
-<div class="field-icon-wrap">
-<textarea id="details" name="details" placeholder="Tell us a little more about the job&hellip;"></textarea>
-</div>
-</div>
+              <h3 class="h4 fw-bold mb-1">Request a quote</h3>
+              <p class="text-muted mb-4">
+                Fill in the details below and we will get back to you.
+              </p>
 
-<button type="submit" class="form-submit-btn">Submit request <i class="fas fa-paper-plane ms-2"></i></button>
+              <form name="quote-request" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="quote-request">
 
-<div class="form-note"><i class="fas fa-lock"></i> Your details are only used to prepare your quote.</div>
-</form>
-</div>
-</div>
+                <div class="row g-3">
 
-</div>
-</div>
-</section>
-</div>
+                  <div class="col-12 col-md-6">
+                    <label for="name" class="form-label fw-semibold">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      placeholder="Your full name"
+                      required
+                    >
+                  </div>
 
-<!--END OF PAGE-->
+                  <div class="col-12 col-md-6">
+                    <label for="phone" class="form-label fw-semibold">Phone</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      name="phone"
+                      placeholder="Your phone number"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="email" class="form-label fw-semibold">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="you@example.com"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="service" class="form-label fw-semibold">Service</label>
+                    <select class="form-select" id="service" name="service">
+                      <option value="Solar">Solar</option>
+                      <option value="Surveillance">Surveillance</option>
+                      <option value="Aircon">Aircon</option>
+                      <option value="Gate">Gate</option>
+                      <option value="Intercom">Intercom</option>
+                      <option value="Pool">Pool</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="details" class="form-label fw-semibold">
+                      Additional information
+                    </label>
+                    <textarea
+                      class="form-control"
+                      id="details"
+                      name="details"
+                      placeholder="Tell us a little more about the job..."
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <button
+                      type="submit"
+                      class="btn btn-info text-white w-100 quote-submit"
+                    >
+                      Submit request
+                      <i class="fas fa-paper-plane ms-2"></i>
+                    </button>
+
+                    <p class="text-muted small mb-0 mt-3">
+                      <i class="fas fa-lock me-1"></i>
+                      Your details are only used to respond to your quote request.
+                    </p>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+
+        <div class="text-center mb-4">
+          <p class="text-info text-uppercase fw-bold small mb-2">
+            Need more information?
+          </p>
+
+          <h2 class="fw-bold mb-2">
+            Frequently Asked Questions
+          </h2>
+
+          <p class="text-muted mb-0">
+            A few quick answers to common questions.
+          </p>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                Which areas do we operate in?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Are your products compliant with local regulations?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                What type of glass is included?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                What type of glass is included?
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- END OF PAGE -->
+
 
 <div class="min-vh-80 " style="background-color:rgba(0, 188, 212, 1.0);">
 <div class="container">
